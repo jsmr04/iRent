@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import FloatingButtonPOP_swift
+//import FloatingButtonPOP_swift
 
-class MapViewController: UIViewController,FloaterViewDelegate {
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
     

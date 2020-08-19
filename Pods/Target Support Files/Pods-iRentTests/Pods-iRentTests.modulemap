@@ -1,6 +1,0 @@
-framework module Pods_iRentTests {
-  umbrella header "Pods-iRentTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
