@@ -7,6 +7,9 @@ target 'iRent' do
 
   # Pods for iRent
   pod ‘FloatingButtonPOP-swift’
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'iRentTests' do
     inherit! :search_paths

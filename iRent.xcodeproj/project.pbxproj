@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04090031D4E98BA874D4625D /* Pods_iRentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B895FD2109542E380C722E9D /* Pods_iRentTests.framework */; };
 		5B27C979B9412C712F0CF399 /* Pods_iRent_iRentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2DDE34A30999E7E7855517 /* Pods_iRent_iRentUITests.framework */; };
+		6E376FF924EDC4CD00B9A53E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E376FF824EDC4CD00B9A53E /* GoogleService-Info.plist */; };
 		6EA1275924ED68B600B06327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275824ED68B600B06327 /* AppDelegate.swift */; };
 		6EA1275B24ED68B600B06327 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275A24ED68B600B06327 /* SceneDelegate.swift */; };
 		6EA1275D24ED68B600B06327 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275C24ED68B600B06327 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		30706F9DD05AD16DA1FEE6C6 /* Pods-iRent-iRentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent-iRentUITests.debug.xcconfig"; path = "Target Support Files/Pods-iRent-iRentUITests/Pods-iRent-iRentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.release.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
 		6E1E2EE4229A0A5646DC7B12 /* Pods-iRentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRentTests.debug.xcconfig"; path = "Target Support Files/Pods-iRentTests/Pods-iRentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E376FF824EDC4CD00B9A53E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E72B9D60DAE3AA2947AE668 /* Pods-iRent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.debug.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.debug.xcconfig"; sourceTree = "<group>"; };
 		6EA1275524ED68B600B06327 /* iRent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA1275824ED68B600B06327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		6EA1275724ED68B600B06327 /* iRent */ = {
 			isa = PBXGroup;
 			children = (
+				6E376FF824EDC4CD00B9A53E /* GoogleService-Info.plist */,
 				6EA1275824ED68B600B06327 /* AppDelegate.swift */,
 				6EA1275A24ED68B600B06327 /* SceneDelegate.swift */,
 				6EA1275C24ED68B600B06327 /* ViewController.swift */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA1276524ED68BF00B06327 /* LaunchScreen.storyboard in Resources */,
+				6E376FF924EDC4CD00B9A53E /* GoogleService-Info.plist in Resources */,
 				6EA1276224ED68BF00B06327 /* Assets.xcassets in Resources */,
 				6EA1276024ED68B600B06327 /* Main.storyboard in Resources */,
 			);
