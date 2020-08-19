@@ -30,14 +30,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x9y-Dc-BLw">
+                                <rect key="frame" x="0.0" y="144" width="414" height="635"/>
+                            </mapView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjQ-du-LQY">
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem image="magnifyingglass" catalog="system" id="ZkK-Jm-5Bh"/>
+                                    <tabBarItem image="message" catalog="system" id="gtS-Lt-Rgg"/>
+                                    <tabBarItem image="rectangle.3.offgrid" catalog="system" id="TVX-g2-Kgb"/>
+                                </items>
+                            </tabBar>
+                            <searchBar contentMode="redraw" placeholder="Type an address, neighbourhood or city" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-pl-6oO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sjQ-du-LQY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0aP-fi-eE5"/>
+                            <constraint firstItem="sjQ-du-LQY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0zF-3C-HIv"/>
+                            <constraint firstItem="x9y-Dc-BLw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="67c-BY-d0l"/>
+                            <constraint firstItem="AvF-pl-6oO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9GO-g5-pRw"/>
+                            <constraint firstItem="AvF-pl-6oO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wj1-FB-v4h"/>
+                            <constraint firstItem="sjQ-du-LQY" firstAttribute="top" secondItem="x9y-Dc-BLw" secondAttribute="bottom" id="kel-sk-mhv"/>
+                            <constraint firstItem="x9y-Dc-BLw" firstAttribute="top" secondItem="AvF-pl-6oO" secondAttribute="bottom" id="n6B-vH-qyN"/>
+                            <constraint firstItem="x9y-Dc-BLw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qza-cj-7Yg"/>
+                            <constraint firstItem="sjQ-du-LQY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyF-2h-rL8"/>
+                            <constraint firstItem="AvF-pl-6oO" firstAttribute="leading" secondItem="x9y-Dc-BLw" secondAttribute="leading" id="y4d-Fg-ymi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wTv-L2-cAD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535" y="-143"/>
+            <point key="canvasLocation" x="-536.231884057971" y="-143.30357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5SL-S3-6NS">
+            <objects>
+                <viewController id="CWI-5A-hhD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTm-zz-8gr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aYL-R2-LZ3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOb-Vj-vtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LcT-RZ-Kfh">
+            <objects>
+                <viewController id="yke-DH-lka" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ofg-VH-nzA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yYX-eQ-6nM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pov-Uz-lfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DjE-Dd-XFc">
+            <objects>
+                <viewController id="Zge-I5-ZDg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILs-f3-fZx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="T5b-fX-3Sz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJu-d2-jVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="-417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nen-nH-MJ1">
+            <objects>
+                <viewController id="miy-3b-NGI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUa-DD-hRS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9g3-jr-Dm7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHG-lv-N0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="-409"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="rectangle.3.offgrid" catalog="system" width="128" height="80"/>
+    </resources>
 </document>
