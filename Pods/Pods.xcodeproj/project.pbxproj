@@ -1,0 +1,982 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30ABFA51834F2F00D30909F3460F0889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		350C4D987DB12D03DEE5562A5BD08E68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3689A9E9D7EBAD0AC991C74DB131DF8A /* Pods-iRentTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDDB0437D17BE4CE54A06081EFBB38B2 /* Pods-iRentTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		446A7212F923C28A0D346A89CB78E65B /* FloatingButtonPOP-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 512ED031C22704B346FB36FA63D88671 /* FloatingButtonPOP-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		703C4578204A49CDFD46E8D5AA6F3657 /* Pods-iRent-iRentUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E192BCCC19124844E40FBAB5777DE3F /* Pods-iRent-iRentUITests-dummy.m */; };
+		84E57D4290A7DCEEE5785C264ADB60EA /* Pods-iRentTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F80C3717F91456CE381AF003FDC3409C /* Pods-iRentTests-dummy.m */; };
+		91E7905764C8586690F81B363D1B4C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9B508D5EA07E552EF61CF3F89DE9ADE5 /* FloatingButtonPOP-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46DE334A99F0CA8539392B3A66A590 /* FloatingButtonPOP-swift-dummy.m */; };
+		C3A3BCE499D81389B2F815C6369AEC75 /* FloatingButtonPOP_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BCADB22661CB1EF397F32E147ABD0E1 /* FloatingButtonPOP_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C52FD0756E2B63FE3C93681D2CE0EF25 /* FloaterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F0DC5B09E77A3997626203F03501 /* FloaterViewDelegate.swift */; };
+		D498D35034E6EB29514CE6B02C985C7C /* Pods-iRent-iRentUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 374F381C641107ABCEA9959367F3E798 /* Pods-iRent-iRentUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4F129E67D2B39CC759B7CE0D14332C5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7199502DB724CCB083B14C634F4D8 /* UIImageViewExtension.swift */; };
+		D6E976635EAEDAFB4C27CEF5FE8B256F /* Pods-iRent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F1A04E6A6604A36D50A3E72596DAB9 /* Pods-iRent-dummy.m */; };
+		DCF3C4EE95154B970CCF1B1CE7CC839A /* Pods-iRent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A96ED37EACEBC3B7AA108F971D7735A /* Pods-iRent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF2B1CCD9096C1E8D782334209A3E72C /* FloaterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80E0621547E0E4BAE5880B69703662 /* FloaterItemView.swift */; };
+		F44F06AF7CF0F68970C13D6F92E449EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95A8CDA313F8516C0364048FEFFFF5AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8967EF926E70E893BD11B31B4AA19B3E;
+			remoteInfo = "Pods-iRent";
+		};
+		96DFE59C98B5060DA0CF1E6660FBB455 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B899E648D8FC68FEAB6EE7F5B658CB4C;
+			remoteInfo = "FloatingButtonPOP-swift";
+		};
+		AD840FA549D0BDFFBAAF7630B7B9994F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B899E648D8FC68FEAB6EE7F5B658CB4C;
+			remoteInfo = "FloatingButtonPOP-swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020DDAB62ADC453774BBCFE3A9BA67B8 /* Pods-iRent-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iRent-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08ACEA11D0F5E19CDC66AE773B603B88 /* Pods-iRent-iRentUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRent-iRentUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		16218F53D2C948FA648F4D4D84E2454F /* Pods_iRent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iRent.framework; path = "Pods-iRent.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A96ED37EACEBC3B7AA108F971D7735A /* Pods-iRent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iRent-umbrella.h"; sourceTree = "<group>"; };
+		2D74B0DB698E83B8FF5B44073E7B6B56 /* Pods-iRentTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iRentTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35497799A74DBA72DDF815D552795F40 /* Pods-iRent-iRentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRent-iRentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		374F381C641107ABCEA9959367F3E798 /* Pods-iRent-iRentUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iRent-iRentUITests-umbrella.h"; sourceTree = "<group>"; };
+		4C23AC4E159D4FCCFC3293804FCD797E /* Pods-iRent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRent.debug.xcconfig"; sourceTree = "<group>"; };
+		512ED031C22704B346FB36FA63D88671 /* FloatingButtonPOP-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingButtonPOP-swift-umbrella.h"; sourceTree = "<group>"; };
+		54C697380C3FCA925E2173C36C8FAFE2 /* Pods-iRent-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRent-acknowledgements.plist"; sourceTree = "<group>"; };
+		56F1A04E6A6604A36D50A3E72596DAB9 /* Pods-iRent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iRent-dummy.m"; sourceTree = "<group>"; };
+		57A276CC73B52FD4E5758F7FDB7611DB /* FloatingButtonPOP-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "FloatingButtonPOP-swift.modulemap"; sourceTree = "<group>"; };
+		6B27309A64EEB3CE7B1F5BBE94A216C9 /* Pods-iRent-iRentUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRent-iRentUITests-Info.plist"; sourceTree = "<group>"; };
+		6BE30461F05DC3F8AC20420EC685888D /* Pods-iRentTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iRentTests.modulemap"; sourceTree = "<group>"; };
+		6EE943E1C4B771BE3EDCF4B7C830E82C /* Pods-iRent-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iRent-frameworks.sh"; sourceTree = "<group>"; };
+		6FC3223CC9F0C8FA66EEF81919DF21FF /* Pods-iRentTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRentTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		71C7199502DB724CCB083B14C634F4D8 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = "FloatingButtonPOP-swift/UIImageViewExtension.swift"; sourceTree = "<group>"; };
+		8BCADB22661CB1EF397F32E147ABD0E1 /* FloatingButtonPOP_swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatingButtonPOP_swift.h; path = "FloatingButtonPOP-swift/FloatingButtonPOP_swift.h"; sourceTree = "<group>"; };
+		8C77938841D69CFF70094AFC4C65A890 /* FloatingButtonPOP-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingButtonPOP-swift-prefix.pch"; sourceTree = "<group>"; };
+		8E99528DCAEF9BA200FA584D6CAD494A /* FloatingButtonPOP-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "FloatingButtonPOP-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9389A3A8D3CA1D6BD69AF2903B4AAC97 /* Pods-iRent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iRent.modulemap"; sourceTree = "<group>"; };
+		93C860749DB7DB0D05CE7A9D6EFBE034 /* Pods-iRent-iRentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRent-iRentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9520DBEDD20984BE0A68D6B0F7C6118A /* Pods_iRentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iRentTests.framework; path = "Pods-iRentTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C80F0DC5B09E77A3997626203F03501 /* FloaterViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloaterViewDelegate.swift; path = "FloatingButtonPOP-swift/FloaterViewDelegate.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E192BCCC19124844E40FBAB5777DE3F /* Pods-iRent-iRentUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iRent-iRentUITests-dummy.m"; sourceTree = "<group>"; };
+		A59C34D89552B3D454E18727CF4531CC /* Pods-iRentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRentTests.release.xcconfig"; sourceTree = "<group>"; };
+		B44C58E6D94CB93867A6AF56F9F23CA1 /* Pods-iRent-iRentUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iRent-iRentUITests.modulemap"; sourceTree = "<group>"; };
+		BB0EB7222C6396FD6F05B4F9DD38F67A /* Pods-iRentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDEF455A8DE91DC4D3A63B9EA1A8E7E9 /* Pods-iRent-iRentUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iRent-iRentUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BFCCFE6D38D8A2C80EEF480FDA070318 /* Pods-iRentTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRentTests-Info.plist"; sourceTree = "<group>"; };
+		C802C38812AC4D2813D5ADD4FD01A903 /* FloatingButtonPOP-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "FloatingButtonPOP-swift.release.xcconfig"; sourceTree = "<group>"; };
+		CA46DE334A99F0CA8539392B3A66A590 /* FloatingButtonPOP-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingButtonPOP-swift-dummy.m"; sourceTree = "<group>"; };
+		D036883EE94015D3236FC0C14F24CF13 /* Pods-iRent-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iRent-Info.plist"; sourceTree = "<group>"; };
+		D1A309E10885EDE3610E4080CC1CD729 /* FloatingButtonPOP-swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingButtonPOP-swift-Info.plist"; sourceTree = "<group>"; };
+		DAB895575BAF6E3CCF0532C4534F28BF /* FloatingButtonPOP_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingButtonPOP_swift.framework; path = "FloatingButtonPOP-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDB0437D17BE4CE54A06081EFBB38B2 /* Pods-iRentTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iRentTests-umbrella.h"; sourceTree = "<group>"; };
+		ECD8198E3AD5446594AF0E30A9658D02 /* Pods_iRent_iRentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iRent_iRentUITests.framework; path = "Pods-iRent-iRentUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80C3717F91456CE381AF003FDC3409C /* Pods-iRentTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iRentTests-dummy.m"; sourceTree = "<group>"; };
+		FA0A554E346E25F78A778D2C93A40540 /* Pods-iRent-iRentUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iRent-iRentUITests-frameworks.sh"; sourceTree = "<group>"; };
+		FC27E7EA9AA39C116F6ED2AFC60CEC99 /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
+		FD80E0621547E0E4BAE5880B69703662 /* FloaterItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloaterItemView.swift; path = "FloatingButtonPOP-swift/FloaterItemView.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0726DCE53E0A6BE67FA04F3F395381FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30ABFA51834F2F00D30909F3460F0889 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43CDF581EACE2879A65AFB18B959C145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F06AF7CF0F68970C13D6F92E449EB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8637918913D623106AA1BA24CE88B28A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				350C4D987DB12D03DEE5562A5BD08E68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E861F7225BC0A32B5C922B5379D62783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E7905764C8586690F81B363D1B4C8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CDDD0CA0D46506C5FFAB4C4046FE98E /* Pods-iRentTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BE30461F05DC3F8AC20420EC685888D /* Pods-iRentTests.modulemap */,
+				2D74B0DB698E83B8FF5B44073E7B6B56 /* Pods-iRentTests-acknowledgements.markdown */,
+				6FC3223CC9F0C8FA66EEF81919DF21FF /* Pods-iRentTests-acknowledgements.plist */,
+				F80C3717F91456CE381AF003FDC3409C /* Pods-iRentTests-dummy.m */,
+				BFCCFE6D38D8A2C80EEF480FDA070318 /* Pods-iRentTests-Info.plist */,
+				DDDB0437D17BE4CE54A06081EFBB38B2 /* Pods-iRentTests-umbrella.h */,
+				BB0EB7222C6396FD6F05B4F9DD38F67A /* Pods-iRentTests.debug.xcconfig */,
+				A59C34D89552B3D454E18727CF4531CC /* Pods-iRentTests.release.xcconfig */,
+			);
+			name = "Pods-iRentTests";
+			path = "Target Support Files/Pods-iRentTests";
+			sourceTree = "<group>";
+		};
+		315C50243F875E6C44934AD901D82E95 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57A276CC73B52FD4E5758F7FDB7611DB /* FloatingButtonPOP-swift.modulemap */,
+				CA46DE334A99F0CA8539392B3A66A590 /* FloatingButtonPOP-swift-dummy.m */,
+				D1A309E10885EDE3610E4080CC1CD729 /* FloatingButtonPOP-swift-Info.plist */,
+				8C77938841D69CFF70094AFC4C65A890 /* FloatingButtonPOP-swift-prefix.pch */,
+				512ED031C22704B346FB36FA63D88671 /* FloatingButtonPOP-swift-umbrella.h */,
+				8E99528DCAEF9BA200FA584D6CAD494A /* FloatingButtonPOP-swift.debug.xcconfig */,
+				C802C38812AC4D2813D5ADD4FD01A903 /* FloatingButtonPOP-swift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FloatingButtonPOP-swift";
+			sourceTree = "<group>";
+		};
+		65F2A3E5DD364D0334B1BAC3BEBE33DB /* Pods-iRent-iRentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B44C58E6D94CB93867A6AF56F9F23CA1 /* Pods-iRent-iRentUITests.modulemap */,
+				BDEF455A8DE91DC4D3A63B9EA1A8E7E9 /* Pods-iRent-iRentUITests-acknowledgements.markdown */,
+				08ACEA11D0F5E19CDC66AE773B603B88 /* Pods-iRent-iRentUITests-acknowledgements.plist */,
+				9E192BCCC19124844E40FBAB5777DE3F /* Pods-iRent-iRentUITests-dummy.m */,
+				FA0A554E346E25F78A778D2C93A40540 /* Pods-iRent-iRentUITests-frameworks.sh */,
+				6B27309A64EEB3CE7B1F5BBE94A216C9 /* Pods-iRent-iRentUITests-Info.plist */,
+				374F381C641107ABCEA9959367F3E798 /* Pods-iRent-iRentUITests-umbrella.h */,
+				93C860749DB7DB0D05CE7A9D6EFBE034 /* Pods-iRent-iRentUITests.debug.xcconfig */,
+				35497799A74DBA72DDF815D552795F40 /* Pods-iRent-iRentUITests.release.xcconfig */,
+			);
+			name = "Pods-iRent-iRentUITests";
+			path = "Target Support Files/Pods-iRent-iRentUITests";
+			sourceTree = "<group>";
+		};
+		BBF4344E045C9CB926399CEAE132D1BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB895575BAF6E3CCF0532C4534F28BF /* FloatingButtonPOP_swift.framework */,
+				16218F53D2C948FA648F4D4D84E2454F /* Pods_iRent.framework */,
+				ECD8198E3AD5446594AF0E30A9658D02 /* Pods_iRent_iRentUITests.framework */,
+				9520DBEDD20984BE0A68D6B0F7C6118A /* Pods_iRentTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C813CF33FB7517010BCCD40318434D36 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA9573C04D0023410CFF06FDF19FB8E0 /* Pods-iRent */,
+				65F2A3E5DD364D0334B1BAC3BEBE33DB /* Pods-iRent-iRentUITests */,
+				0CDDD0CA0D46506C5FFAB4C4046FE98E /* Pods-iRentTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CABD86083ABD1FFC1C4480BA7FD63E3A /* FloatingButtonPOP-swift */ = {
+			isa = PBXGroup;
+			children = (
+				FD80E0621547E0E4BAE5880B69703662 /* FloaterItemView.swift */,
+				9C80F0DC5B09E77A3997626203F03501 /* FloaterViewDelegate.swift */,
+				8BCADB22661CB1EF397F32E147ABD0E1 /* FloatingButtonPOP_swift.h */,
+				71C7199502DB724CCB083B14C634F4D8 /* UIImageViewExtension.swift */,
+				315C50243F875E6C44934AD901D82E95 /* Support Files */,
+			);
+			name = "FloatingButtonPOP-swift";
+			path = "FloatingButtonPOP-swift";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				D3EC41FF490AF47C6A702FB019581F9A /* Pods */,
+				BBF4344E045C9CB926399CEAE132D1BB /* Products */,
+				C813CF33FB7517010BCCD40318434D36 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3EC41FF490AF47C6A702FB019581F9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CABD86083ABD1FFC1C4480BA7FD63E3A /* FloatingButtonPOP-swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA9573C04D0023410CFF06FDF19FB8E0 /* Pods-iRent */ = {
+			isa = PBXGroup;
+			children = (
+				9389A3A8D3CA1D6BD69AF2903B4AAC97 /* Pods-iRent.modulemap */,
+				020DDAB62ADC453774BBCFE3A9BA67B8 /* Pods-iRent-acknowledgements.markdown */,
+				54C697380C3FCA925E2173C36C8FAFE2 /* Pods-iRent-acknowledgements.plist */,
+				56F1A04E6A6604A36D50A3E72596DAB9 /* Pods-iRent-dummy.m */,
+				6EE943E1C4B771BE3EDCF4B7C830E82C /* Pods-iRent-frameworks.sh */,
+				D036883EE94015D3236FC0C14F24CF13 /* Pods-iRent-Info.plist */,
+				1A96ED37EACEBC3B7AA108F971D7735A /* Pods-iRent-umbrella.h */,
+				4C23AC4E159D4FCCFC3293804FCD797E /* Pods-iRent.debug.xcconfig */,
+				FC27E7EA9AA39C116F6ED2AFC60CEC99 /* Pods-iRent.release.xcconfig */,
+			);
+			name = "Pods-iRent";
+			path = "Target Support Files/Pods-iRent";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		950504A243284421DCF926ABEA472551 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF3C4EE95154B970CCF1B1CE7CC839A /* Pods-iRent-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC72279753DF8794EEF39383CC5370AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3689A9E9D7EBAD0AC991C74DB131DF8A /* Pods-iRentTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F38CE301C9FE7F225E26B4DFDF2C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				446A7212F923C28A0D346A89CB78E65B /* FloatingButtonPOP-swift-umbrella.h in Headers */,
+				C3A3BCE499D81389B2F815C6369AEC75 /* FloatingButtonPOP_swift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7902962B364818BC52E3206FCABE330 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D498D35034E6EB29514CE6B02C985C7C /* Pods-iRent-iRentUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4297F2B8F58B534503825F3DD172559C /* Pods-iRent-iRentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F16650683F162575BA086F2D8E21FB9 /* Build configuration list for PBXNativeTarget "Pods-iRent-iRentUITests" */;
+			buildPhases = (
+				F7902962B364818BC52E3206FCABE330 /* Headers */,
+				7E06BBC8461AB5F819567E9FA1BF9DDB /* Sources */,
+				8637918913D623106AA1BA24CE88B28A /* Frameworks */,
+				9B8DFDF84054D348592F025013265ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABDCCF1D30B50B2DF8AA2C9A7B92E365 /* PBXTargetDependency */,
+			);
+			name = "Pods-iRent-iRentUITests";
+			productName = "Pods-iRent-iRentUITests";
+			productReference = ECD8198E3AD5446594AF0E30A9658D02 /* Pods_iRent_iRentUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8967EF926E70E893BD11B31B4AA19B3E /* Pods-iRent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8818D4C673AC63C3C4ED7951615A135B /* Build configuration list for PBXNativeTarget "Pods-iRent" */;
+			buildPhases = (
+				950504A243284421DCF926ABEA472551 /* Headers */,
+				5A93DA9F200794BA31F3E5DCFD1EC453 /* Sources */,
+				43CDF581EACE2879A65AFB18B959C145 /* Frameworks */,
+				45CCFCC4DAD748D21D6360FD97CB3F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				122854AE6984DFF0779811D27E2A61D4 /* PBXTargetDependency */,
+			);
+			name = "Pods-iRent";
+			productName = "Pods-iRent";
+			productReference = 16218F53D2C948FA648F4D4D84E2454F /* Pods_iRent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEAD1FFFBDD6D81B30B1BD96FC3EB055 /* Pods-iRentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 559CF7E27193311A6617018C13CADE3E /* Build configuration list for PBXNativeTarget "Pods-iRentTests" */;
+			buildPhases = (
+				DC72279753DF8794EEF39383CC5370AF /* Headers */,
+				11548E9D8D15E959B2CFD1B0ED11280C /* Sources */,
+				E861F7225BC0A32B5C922B5379D62783 /* Frameworks */,
+				3A8C5F76D21AADF9FDF327FB934D3C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91F85D9F571FB129D38A23497B6AA985 /* PBXTargetDependency */,
+			);
+			name = "Pods-iRentTests";
+			productName = "Pods-iRentTests";
+			productReference = 9520DBEDD20984BE0A68D6B0F7C6118A /* Pods_iRentTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B899E648D8FC68FEAB6EE7F5B658CB4C /* FloatingButtonPOP-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12E2D51464164EF95BB1C1A1A4849D77 /* Build configuration list for PBXNativeTarget "FloatingButtonPOP-swift" */;
+			buildPhases = (
+				EE9F38CE301C9FE7F225E26B4DFDF2C2 /* Headers */,
+				7681E157E380162648D135FF551DB951 /* Sources */,
+				0726DCE53E0A6BE67FA04F3F395381FD /* Frameworks */,
+				21E9DCC3BF6958C254466ECABB3FCAB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FloatingButtonPOP-swift";
+			productName = "FloatingButtonPOP-swift";
+			productReference = DAB895575BAF6E3CCF0532C4534F28BF /* FloatingButtonPOP_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = BBF4344E045C9CB926399CEAE132D1BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B899E648D8FC68FEAB6EE7F5B658CB4C /* FloatingButtonPOP-swift */,
+				8967EF926E70E893BD11B31B4AA19B3E /* Pods-iRent */,
+				4297F2B8F58B534503825F3DD172559C /* Pods-iRent-iRentUITests */,
+				AEAD1FFFBDD6D81B30B1BD96FC3EB055 /* Pods-iRentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21E9DCC3BF6958C254466ECABB3FCAB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8C5F76D21AADF9FDF327FB934D3C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CCFCC4DAD748D21D6360FD97CB3F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B8DFDF84054D348592F025013265ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11548E9D8D15E959B2CFD1B0ED11280C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E57D4290A7DCEEE5785C264ADB60EA /* Pods-iRentTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A93DA9F200794BA31F3E5DCFD1EC453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E976635EAEDAFB4C27CEF5FE8B256F /* Pods-iRent-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7681E157E380162648D135FF551DB951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2B1CCD9096C1E8D782334209A3E72C /* FloaterItemView.swift in Sources */,
+				C52FD0756E2B63FE3C93681D2CE0EF25 /* FloaterViewDelegate.swift in Sources */,
+				9B508D5EA07E552EF61CF3F89DE9ADE5 /* FloatingButtonPOP-swift-dummy.m in Sources */,
+				D4F129E67D2B39CC759B7CE0D14332C5 /* UIImageViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BBC8461AB5F819567E9FA1BF9DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703C4578204A49CDFD46E8D5AA6F3657 /* Pods-iRent-iRentUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		122854AE6984DFF0779811D27E2A61D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FloatingButtonPOP-swift";
+			target = B899E648D8FC68FEAB6EE7F5B658CB4C /* FloatingButtonPOP-swift */;
+			targetProxy = 96DFE59C98B5060DA0CF1E6660FBB455 /* PBXContainerItemProxy */;
+		};
+		91F85D9F571FB129D38A23497B6AA985 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-iRent";
+			target = 8967EF926E70E893BD11B31B4AA19B3E /* Pods-iRent */;
+			targetProxy = 95A8CDA313F8516C0364048FEFFFF5AB /* PBXContainerItemProxy */;
+		};
+		ABDCCF1D30B50B2DF8AA2C9A7B92E365 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FloatingButtonPOP-swift";
+			target = B899E648D8FC68FEAB6EE7F5B658CB4C /* FloatingButtonPOP-swift */;
+			targetProxy = AD840FA549D0BDFFBAAF7630B7B9994F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		38EC63E8A5ACDA708029F72E17BC45D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C802C38812AC4D2813D5ADD4FD01A903 /* FloatingButtonPOP-swift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift.modulemap";
+				PRODUCT_MODULE_NAME = FloatingButtonPOP_swift;
+				PRODUCT_NAME = FloatingButtonPOP_swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45C4F73B7E4018A315B0A07D78DDD13C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C23AC4E159D4FCCFC3293804FCD797E /* Pods-iRent.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRent/Pods-iRent-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRent/Pods-iRent.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		860ACF86EFDD2D7D87BA1BF7000B123B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C860749DB7DB0D05CE7A9D6EFBE034 /* Pods-iRent-iRentUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRent-iRentUITests/Pods-iRent-iRentUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRent-iRentUITests/Pods-iRent-iRentUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE273494DC162F1E10B74CA81CA2AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0EB7222C6396FD6F05B4F9DD38F67A /* Pods-iRentTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRentTests/Pods-iRentTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRentTests/Pods-iRentTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B32B57E9B86DA91718705F07156BEB32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E99528DCAEF9BA200FA584D6CAD494A /* FloatingButtonPOP-swift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingButtonPOP-swift/FloatingButtonPOP-swift.modulemap";
+				PRODUCT_MODULE_NAME = FloatingButtonPOP_swift;
+				PRODUCT_NAME = FloatingButtonPOP_swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9EA16E374D702F57EEB744CB837492A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35497799A74DBA72DDF815D552795F40 /* Pods-iRent-iRentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRent-iRentUITests/Pods-iRent-iRentUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRent-iRentUITests/Pods-iRent-iRentUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DDA2A46F6E40AAE77F795EAC7FAD76BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC27E7EA9AA39C116F6ED2AFC60CEC99 /* Pods-iRent.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRent/Pods-iRent-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRent/Pods-iRent.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E5E59A52975D96208044E197A49C1DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59C34D89552B3D454E18727CF4531CC /* Pods-iRentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iRentTests/Pods-iRentTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iRentTests/Pods-iRentTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F5F04600F5626DC980F02790D1ED2C19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F16650683F162575BA086F2D8E21FB9 /* Build configuration list for PBXNativeTarget "Pods-iRent-iRentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860ACF86EFDD2D7D87BA1BF7000B123B /* Debug */,
+				D9EA16E374D702F57EEB744CB837492A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E2D51464164EF95BB1C1A1A4849D77 /* Build configuration list for PBXNativeTarget "FloatingButtonPOP-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32B57E9B86DA91718705F07156BEB32 /* Debug */,
+				38EC63E8A5ACDA708029F72E17BC45D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */,
+				F5F04600F5626DC980F02790D1ED2C19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		559CF7E27193311A6617018C13CADE3E /* Build configuration list for PBXNativeTarget "Pods-iRentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE273494DC162F1E10B74CA81CA2AED /* Debug */,
+				E5E59A52975D96208044E197A49C1DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8818D4C673AC63C3C4ED7951615A135B /* Build configuration list for PBXNativeTarget "Pods-iRent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C4F73B7E4018A315B0A07D78DDD13C /* Debug */,
+				DDA2A46F6E40AAE77F795EAC7FAD76BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
