@@ -23,19 +23,19 @@
             </objects>
             <point key="canvasLocation" x="-1400" y="-143"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iRent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="iRent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x9y-Dc-BLw">
-                                <rect key="frame" x="0.0" y="144" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                             </mapView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjQ-du-LQY">
-                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem image="magnifyingglass" catalog="system" id="ZkK-Jm-5Bh"/>
@@ -43,7 +43,7 @@
                                     <tabBarItem image="rectangle.3.offgrid" catalog="system" id="TVX-g2-Kgb"/>
                                 </items>
                             </tabBar>
-                            <searchBar contentMode="redraw" placeholder="Type an address, neighbourhood or city" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-pl-6oO">
+                            <searchBar contentMode="redraw" placeholder="Address, neighbourhood or city" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-pl-6oO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -106,13 +106,45 @@
                     <view key="view" contentMode="scaleToFill" id="ILs-f3-fZx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ceJ-zB-8Ol">
+                                <rect key="frame" x="0.0" y="126" width="414" height="653"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Address, neighbourhood or city" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-u6-v35">
+                                <rect key="frame" x="0.0" y="70" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="No2-eK-Jgx">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem image="magnifyingglass" catalog="system" id="UU7-xO-GD8"/>
+                                    <tabBarItem image="message" catalog="system" id="hou-X1-MfC"/>
+                                    <tabBarItem image="rectangle.3.offgrid" catalog="system" id="UA6-td-rXJ"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oPg-u6-v35" firstAttribute="top" secondItem="T5b-fX-3Sz" secondAttribute="top" constant="26" id="3yD-2r-hav"/>
+                            <constraint firstItem="oPg-u6-v35" firstAttribute="leading" secondItem="T5b-fX-3Sz" secondAttribute="leading" id="40W-jd-6ao"/>
+                            <constraint firstItem="No2-eK-Jgx" firstAttribute="bottom" secondItem="T5b-fX-3Sz" secondAttribute="bottom" id="6Lh-Jz-CIB"/>
+                            <constraint firstItem="ceJ-zB-8Ol" firstAttribute="top" secondItem="oPg-u6-v35" secondAttribute="bottom" id="8R6-zr-fIZ"/>
+                            <constraint firstItem="ceJ-zB-8Ol" firstAttribute="trailing" secondItem="T5b-fX-3Sz" secondAttribute="trailing" id="AcC-RN-j1Q"/>
+                            <constraint firstItem="ceJ-zB-8Ol" firstAttribute="leading" secondItem="T5b-fX-3Sz" secondAttribute="leading" id="iNW-o7-l3Q"/>
+                            <constraint firstItem="No2-eK-Jgx" firstAttribute="trailing" secondItem="T5b-fX-3Sz" secondAttribute="trailing" id="lqs-em-KjV"/>
+                            <constraint firstItem="ceJ-zB-8Ol" firstAttribute="top" secondItem="oPg-u6-v35" secondAttribute="bottom" id="m7F-Dd-aIx"/>
+                            <constraint firstItem="No2-eK-Jgx" firstAttribute="top" secondItem="ceJ-zB-8Ol" secondAttribute="bottom" constant="34" id="pFN-k9-KGE"/>
+                            <constraint firstItem="No2-eK-Jgx" firstAttribute="leading" secondItem="T5b-fX-3Sz" secondAttribute="leading" id="teO-c1-kfi"/>
+                            <constraint firstItem="oPg-u6-v35" firstAttribute="trailing" secondItem="T5b-fX-3Sz" secondAttribute="trailing" id="uaF-3o-MaY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T5b-fX-3Sz"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJu-d2-jVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="-417"/>
+            <point key="canvasLocation" x="524.63768115942037" y="-417.1875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nen-nH-MJ1">
