@@ -102,13 +102,69 @@
 		6E2B5CE124EEC55500F3D11B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E2B5CEA24EF3DB500F3D11B /* Authentication */,
+				6E2B5CE824EF3CFD00F3D11B /* Menu */,
+				6E2B5CE724EF3CE700F3D11B /* Message */,
+				6E2B5CE624EF3CDC00F3D11B /* Search */,
 				6EA1275C24ED68B600B06327 /* ViewController.swift */,
-				6EA1278824EDA99D00B06327 /* MapViewController.swift */,
-				6E2B5CDF24EEC29200F3D11B /* LoginViewController.swift */,
-				19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */,
-				6E2B5CE224EEF92300F3D11B /* SignUpViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E2B5CE424EF3CBE00F3D11B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E2B5CE524EF3CCD00F3D11B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EA1275E24ED68B600B06327 /* Main.storyboard */,
+				6EA1276324ED68BF00B06327 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E2B5CE624EF3CDC00F3D11B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6EA1278824EDA99D00B06327 /* MapViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6E2B5CE724EF3CE700F3D11B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		6E2B5CE824EF3CFD00F3D11B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */,
+				6E2B5CE924EF3D1100F3D11B /* MyProperties */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		6E2B5CE924EF3D1100F3D11B /* MyProperties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyProperties;
+			sourceTree = "<group>";
+		};
+		6E2B5CEA24EF3DB500F3D11B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				6E2B5CDF24EEC29200F3D11B /* LoginViewController.swift */,
+				6E2B5CE224EEF92300F3D11B /* SignUpViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		6EA1274C24ED68B600B06327 = {
@@ -137,11 +193,11 @@
 		6EA1275724ED68B600B06327 /* iRent */ = {
 			isa = PBXGroup;
 			children = (
+				6E2B5CE524EF3CCD00F3D11B /* View */,
+				6E2B5CE424EF3CBE00F3D11B /* Model */,
 				6E2B5CE124EEC55500F3D11B /* Controller */,
 				6EA1275824ED68B600B06327 /* AppDelegate.swift */,
 				6EA1275A24ED68B600B06327 /* SceneDelegate.swift */,
-				6EA1275E24ED68B600B06327 /* Main.storyboard */,
-				6EA1276324ED68BF00B06327 /* LaunchScreen.storyboard */,
 				6EA1276624ED68BF00B06327 /* Info.plist */,
 				6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */,
 			);

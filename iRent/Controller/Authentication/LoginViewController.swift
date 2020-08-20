@@ -15,18 +15,29 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var rememberSwitch: UISwitch!
     @IBOutlet weak var forgotPassButton: UIButton!
+    @IBOutlet weak var googleSignInImageView: UIImageView!
+    @IBOutlet weak var facebookSignInImageView: UIImageView!
+    
     
     var email = "";
     var password = "";
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        googleSignInImageView.isUserInteractionEnabled = true
+        let tapGoogleRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGoogleSignIn))
+        googleSignInImageView.addGestureRecognizer(tapGoogleRecognizer)
+        
+        facebookSignInImageView.isUserInteractionEnabled = true
+        let tapFacebookRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapFacebookSignIn))
+        facebookSignInImageView.addGestureRecognizer(tapFacebookRecognizer)
 
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func forgotPasswordTapped(_ sender: Any) {
+        
     }
     
     @IBAction func loginTapped(_ sender: Any) {
@@ -37,11 +48,10 @@ class LoginViewController: UIViewController {
             attemptSignIn()
         }
         
-        print("Email:\(email) & Password:\(password)")
     }
     
     @IBAction func registerNowTapped(_ sender: Any) {
-        
+        performSegue(withIdentifier: "loginToRegister", sender: self)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -83,5 +93,13 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func tapGoogleSignIn(){
+        print("Google Sign In")
+    }
+    
+    @objc func tapFacebookSignIn(){
+        print("Facebook Sign In")
     }
 }
