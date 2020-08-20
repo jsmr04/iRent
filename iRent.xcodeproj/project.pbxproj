@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		19EB7A3224EDD8F000BF1AE7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */; };
 		19EB7A3424EDEB8000BF1AE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EB7A3324EDEB8000BF1AE7 /* GoogleService-Info.plist */; };
+		6E2B5CDE24EEB5A600F3D11B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */; };
 		6EA1275924ED68B600B06327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275824ED68B600B06327 /* AppDelegate.swift */; };
 		6EA1275B24ED68B600B06327 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275A24ED68B600B06327 /* SceneDelegate.swift */; };
 		6EA1275D24ED68B600B06327 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1275C24ED68B600B06327 /* ViewController.swift */; };
 		6EA1276024ED68B600B06327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA1275E24ED68B600B06327 /* Main.storyboard */; };
-		6EA1276224ED68BF00B06327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA1276124ED68BF00B06327 /* Assets.xcassets */; };
 		6EA1276524ED68BF00B06327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA1276324ED68BF00B06327 /* LaunchScreen.storyboard */; };
 		6EA1277024ED68BF00B06327 /* iRentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1276F24ED68BF00B06327 /* iRentTests.swift */; };
 		6EA1277B24ED68BF00B06327 /* iRentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1277A24ED68BF00B06327 /* iRentUITests.swift */; };
@@ -42,13 +42,13 @@
 		19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		19EB7A3324EDEB8000BF1AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.release.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
+		6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E72B9D60DAE3AA2947AE668 /* Pods-iRent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.debug.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.debug.xcconfig"; sourceTree = "<group>"; };
 		6EA1275524ED68B600B06327 /* iRent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA1275824ED68B600B06327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EA1275A24ED68B600B06327 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6EA1275C24ED68B600B06327 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6EA1275F24ED68B600B06327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6EA1276124ED68BF00B06327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EA1276424ED68BF00B06327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA1276624ED68BF00B06327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA1276B24ED68BF00B06327 /* iRentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,11 +125,11 @@
 				6EA1275A24ED68B600B06327 /* SceneDelegate.swift */,
 				6EA1275C24ED68B600B06327 /* ViewController.swift */,
 				6EA1275E24ED68B600B06327 /* Main.storyboard */,
-				6EA1276124ED68BF00B06327 /* Assets.xcassets */,
 				6EA1276324ED68BF00B06327 /* LaunchScreen.storyboard */,
 				6EA1276624ED68BF00B06327 /* Info.plist */,
 				6EA1278824EDA99D00B06327 /* MapViewController.swift */,
 				19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */,
+				6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */,
 			);
 			path = iRent;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			files = (
 				6EA1276524ED68BF00B06327 /* LaunchScreen.storyboard in Resources */,
 				19EB7A3424EDEB8000BF1AE7 /* GoogleService-Info.plist in Resources */,
-				6EA1276224ED68BF00B06327 /* Assets.xcassets in Resources */,
+				6E2B5CDE24EEB5A600F3D11B /* Assets.xcassets in Resources */,
 				6EA1276024ED68B600B06327 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

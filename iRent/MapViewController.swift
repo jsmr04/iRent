@@ -7,13 +7,15 @@
 //
 
 import UIKit
-//import FloatingButtonPOP_swift
+
 
 class MapViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
+        print("Back button")
+        //navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -22,8 +24,9 @@ class MapViewController: UIViewController {
                    print(index)
     }
     
-    
-
+    @objc func back(){
+        
+    }
     /*
     // MARK: - Navigation
 
