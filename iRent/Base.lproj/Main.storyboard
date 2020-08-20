@@ -626,90 +626,102 @@
             </objects>
             <point key="canvasLocation" x="-2249" y="-750"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Uzr-BL-EmF">
             <objects>
-                <viewController id="k7K-Pe-Yqf" sceneMemberID="viewController">
+                <viewController id="k7K-Pe-Yqf" customClass="SignUpViewController" customModule="iRent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G29-3b-dL9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQU-gr-vFh">
-                                <rect key="frame" x="20" y="175" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szT-eW-eIV">
-                                <rect key="frame" x="20" y="230" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZ8-Ln-DXx">
-                                <rect key="frame" x="20" y="283" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-uw-X1Z">
-                                <rect key="frame" x="20" y="333" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-UR-ht5">
-                                <rect key="frame" x="20" y="384" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-Rq-25I">
-                                <rect key="frame" x="20" y="436" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comfirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-DN-Mi8">
-                                <rect key="frame" x="20" y="487" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-7U-Epj">
-                                <rect key="frame" x="181" y="646" width="52" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2iL-Wg-NEe"/>
-                                    <constraint firstAttribute="width" constant="52" id="p6k-ft-YZc"/>
-                                </constraints>
-                                <state key="normal" title="Sign up"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Get started now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URn-8Y-zYv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URn-8Y-zYv">
                                 <rect key="frame" x="117.5" y="110" width="179" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQU-gr-vFh">
+                                <rect key="frame" x="20" y="175" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szT-eW-eIV">
+                                <rect key="frame" x="20" y="230" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZ8-Ln-DXx">
+                                <rect key="frame" x="20" y="283" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-7U-Epj">
+                                <rect key="frame" x="181" y="544" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2iL-Wg-NEe"/>
+                                    <constraint firstAttribute="width" constant="52" id="p6k-ft-YZc"/>
+                                </constraints>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="k7K-Pe-Yqf" eventType="touchUpInside" id="S2c-pQ-jdZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-UR-ht5">
+                                <rect key="frame" x="20" y="340" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-Rq-25I">
+                                <rect key="frame" x="20" y="392" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comfirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-DN-Mi8">
+                                <rect key="frame" x="20" y="443" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rAo-UR-ht5" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="7sJ-1Y-yfz"/>
-                            <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="lTg-uw-X1Z" secondAttribute="trailing" constant="20" id="8WK-y3-cgd"/>
                             <constraint firstItem="ib8-Rq-25I" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="IL4-jD-TdM"/>
                             <constraint firstItem="ANS-7U-Epj" firstAttribute="centerX" secondItem="G29-3b-dL9" secondAttribute="centerX" id="KLg-ET-tQo"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="H8W-DN-Mi8" secondAttribute="trailing" constant="20" id="ONb-Rr-Txy"/>
                             <constraint firstItem="szT-eW-eIV" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="PLk-Jb-xQW"/>
+                            <constraint firstItem="eZ8-Ln-DXx" firstAttribute="top" secondItem="szT-eW-eIV" secondAttribute="bottom" constant="19" id="Pvl-35-iQv"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="szT-eW-eIV" secondAttribute="trailing" constant="20" id="ROv-6s-cRb"/>
+                            <constraint firstItem="rAo-UR-ht5" firstAttribute="top" secondItem="eZ8-Ln-DXx" secondAttribute="bottom" constant="23" id="SxW-7w-11e"/>
                             <constraint firstItem="oQU-gr-vFh" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="Xl6-Yi-Vbu"/>
                             <constraint firstItem="H8W-DN-Mi8" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="YPX-ar-0Up"/>
-                            <constraint firstItem="lTg-uw-X1Z" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="chY-4u-DBS"/>
+                            <constraint firstItem="H8W-DN-Mi8" firstAttribute="top" secondItem="ib8-Rq-25I" secondAttribute="bottom" constant="17" id="aJ9-Zn-EYt"/>
+                            <constraint firstItem="ANS-7U-Epj" firstAttribute="top" secondItem="H8W-DN-Mi8" secondAttribute="bottom" constant="67" id="e6T-5w-6ye"/>
                             <constraint firstItem="eZ8-Ln-DXx" firstAttribute="leading" secondItem="o92-Ir-nRb" secondAttribute="leading" constant="20" id="eiS-3d-uvF"/>
+                            <constraint firstItem="URn-8Y-zYv" firstAttribute="top" secondItem="o92-Ir-nRb" secondAttribute="top" constant="66" id="hs5-4Y-tZl"/>
                             <constraint firstItem="URn-8Y-zYv" firstAttribute="centerX" secondItem="G29-3b-dL9" secondAttribute="centerX" id="jCV-Ih-KBp"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="eZ8-Ln-DXx" secondAttribute="trailing" constant="20" id="jXe-gS-fQk"/>
+                            <constraint firstItem="szT-eW-eIV" firstAttribute="top" secondItem="oQU-gr-vFh" secondAttribute="bottom" constant="21" id="kAy-N9-Rx0"/>
+                            <constraint firstItem="ib8-Rq-25I" firstAttribute="top" secondItem="rAo-UR-ht5" secondAttribute="bottom" constant="18" id="lgz-7F-1lP"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="ib8-Rq-25I" secondAttribute="trailing" constant="20" id="mx3-3q-1sd"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="oQU-gr-vFh" secondAttribute="trailing" constant="20" id="ncx-Fq-tTl"/>
+                            <constraint firstItem="oQU-gr-vFh" firstAttribute="top" secondItem="URn-8Y-zYv" secondAttribute="bottom" constant="33" id="xfe-Yc-rmT"/>
                             <constraint firstItem="o92-Ir-nRb" firstAttribute="trailing" secondItem="rAo-UR-ht5" secondAttribute="trailing" constant="20" id="yPy-Fe-9ye"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o92-Ir-nRb"/>
                     </view>
                     <navigationItem key="navigationItem" id="fdC-WT-ZgV"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextFIeld" destination="H8W-DN-Mi8" id="JWo-pb-YLR"/>
+                        <outlet property="emailTextField" destination="rAo-UR-ht5" id="orp-Kc-IiL"/>
+                        <outlet property="firstNameTextField" destination="oQU-gr-vFh" id="RCy-mT-J9j"/>
+                        <outlet property="lastNameTextField" destination="szT-eW-eIV" id="7SL-NC-m9r"/>
+                        <outlet property="passwordTextField" destination="ib8-Rq-25I" id="UMo-JT-arD"/>
+                        <outlet property="phoneNumberTextField" destination="eZ8-Ln-DXx" id="aqM-dQ-NKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4F-kq-fE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536.2318840579712" y="-1264.2857142857142"/>
+            <point key="canvasLocation" x="-1458" y="-1260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yka-wk-IXo">
