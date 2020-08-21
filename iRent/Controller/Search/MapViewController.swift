@@ -12,14 +12,21 @@ import FirebaseAuth
 class MapViewController: UIViewController {
     var userLoggedIn = false
     
+    
+    @IBOutlet weak var mapFloatingButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = true
         //print("Back button")
         // Do any additional setup after loading the view.
+        mapFloatingButton.backgroundColor = UIColor(named: "RedMain")
+        mapFloatingButton.layer.cornerRadius = mapFloatingButton.frame.height / 2
     }
     
+    @IBAction func floatingListClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "ListPropertiesSegue", sender: self)
+    }
     
     func userDidTapOnItem(at index: Int, with model: String) {
                    print(model)

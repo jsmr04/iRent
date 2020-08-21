@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19EB7A3224EDD8F000BF1AE7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */; };
+		193DC4B224F03FD900C4E03B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */; };
+		193DC4C124F041AB00C4E03B /* CreateProperty2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C024F041AB00C4E03B /* CreateProperty2ViewController.swift */; };
+		193DC4C324F041B400C4E03B /* CreatePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C224F041B400C4E03B /* CreatePropertyViewController.swift */; };
+		193DC4C524F041BC00C4E03B /* MyPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C424F041BC00C4E03B /* MyPropertiesViewController.swift */; };
+		193DC4C824F0421100C4E03B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C724F0421100C4E03B /* MessageViewController.swift */; };
+		193DC4CA24F0421800C4E03B /* PrivateChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C924F0421800C4E03B /* PrivateChatViewController.swift */; };
+		193DC4CC24F0440800C4E03B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4CB24F0440800C4E03B /* ListViewController.swift */; };
 		19EB7A3424EDEB8000BF1AE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EB7A3324EDEB8000BF1AE7 /* GoogleService-Info.plist */; };
 		6E2B5CDE24EEB5A600F3D11B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */; };
 		6E2B5CE024EEC29200F3D11B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B5CDF24EEC29200F3D11B /* LoginViewController.swift */; };
@@ -41,7 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ../../../../../Desktop/iRent/iRent/Controller/Menu/MenuTableViewController.swift; sourceTree = "<group>"; };
+		193DC4C024F041AB00C4E03B /* CreateProperty2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProperty2ViewController.swift; sourceTree = "<group>"; };
+		193DC4C224F041B400C4E03B /* CreatePropertyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePropertyViewController.swift; sourceTree = "<group>"; };
+		193DC4C424F041BC00C4E03B /* MyPropertiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPropertiesViewController.swift; sourceTree = "<group>"; };
+		193DC4C724F0421100C4E03B /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		193DC4C924F0421800C4E03B /* PrivateChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatViewController.swift; sourceTree = "<group>"; };
+		193DC4CB24F0440800C4E03B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		19EB7A3324EDEB8000BF1AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.release.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
 		6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193DC4BF24F0417100C4E03B /* MyProperties */ = {
+			isa = PBXGroup;
+			children = (
+				193DC4C424F041BC00C4E03B /* MyPropertiesViewController.swift */,
+				193DC4C024F041AB00C4E03B /* CreateProperty2ViewController.swift */,
+				193DC4C224F041B400C4E03B /* CreatePropertyViewController.swift */,
+			);
+			path = MyProperties;
+			sourceTree = "<group>";
+		};
+		193DC4C624F041FB00C4E03B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				193DC4C724F0421100C4E03B /* MessageViewController.swift */,
+				193DC4C924F0421800C4E03B /* PrivateChatViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		291E6C7D044F8852AEEFC7EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +133,9 @@
 		6E2B5CE124EEC55500F3D11B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				193DC4C624F041FB00C4E03B /* Message */,
 				6E2B5CEA24EF3DB500F3D11B /* Authentication */,
 				6E2B5CE824EF3CFD00F3D11B /* Menu */,
-				6E2B5CE724EF3CE700F3D11B /* Message */,
 				6E2B5CE624EF3CDC00F3D11B /* Search */,
 				6EA1275C24ED68B600B06327 /* ViewController.swift */,
 			);
@@ -131,31 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				6EA1278824EDA99D00B06327 /* MapViewController.swift */,
+				193DC4CB24F0440800C4E03B /* ListViewController.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		6E2B5CE724EF3CE700F3D11B /* Message */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Message;
 			sourceTree = "<group>";
 		};
 		6E2B5CE824EF3CFD00F3D11B /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				19EB7A3124EDD8F000BF1AE7 /* MenuTableViewController.swift */,
-				6E2B5CE924EF3D1100F3D11B /* MyProperties */,
+				193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */,
+				193DC4BF24F0417100C4E03B /* MyProperties */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		6E2B5CE924EF3D1100F3D11B /* MyProperties */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyProperties;
 			sourceTree = "<group>";
 		};
 		6E2B5CEA24EF3DB500F3D11B /* Authentication */ = {
@@ -407,12 +425,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193DC4CA24F0421800C4E03B /* PrivateChatViewController.swift in Sources */,
+				193DC4C124F041AB00C4E03B /* CreateProperty2ViewController.swift in Sources */,
 				6E2B5CE024EEC29200F3D11B /* LoginViewController.swift in Sources */,
+				193DC4C324F041B400C4E03B /* CreatePropertyViewController.swift in Sources */,
 				6E2B5CE324EEF92300F3D11B /* SignUpViewController.swift in Sources */,
 				6EA1275D24ED68B600B06327 /* ViewController.swift in Sources */,
 				6EA1275924ED68B600B06327 /* AppDelegate.swift in Sources */,
-				19EB7A3224EDD8F000BF1AE7 /* MenuTableViewController.swift in Sources */,
+				193DC4B224F03FD900C4E03B /* MenuTableViewController.swift in Sources */,
+				193DC4C824F0421100C4E03B /* MessageViewController.swift in Sources */,
 				6EA1275B24ED68B600B06327 /* SceneDelegate.swift in Sources */,
+				193DC4C524F041BC00C4E03B /* MyPropertiesViewController.swift in Sources */,
+				193DC4CC24F0440800C4E03B /* ListViewController.swift in Sources */,
 				6EA1278924EDA99D00B06327 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,12 +612,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T666946WX;
 				INFOPLIST_FILE = iRent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jsmr.iRent;
+				PRODUCT_BUNDLE_IDENTIFIER = "arthur-ataide.iRent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -606,12 +631,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T666946WX;
 				INFOPLIST_FILE = iRent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jsmr.iRent;
+				PRODUCT_BUNDLE_IDENTIFIER = "arthur-ataide.iRent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
