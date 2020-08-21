@@ -32,8 +32,14 @@ class LoginViewController: UIViewController {
         facebookSignInImageView.isUserInteractionEnabled = true
         let tapFacebookRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapFacebookSignIn))
         facebookSignInImageView.addGestureRecognizer(tapFacebookRecognizer)
-
-        // Do any additional setup after loading the view.
+        
+        let remember = UserDefaults.standard.bool(forKey: "remember")
+        
+        if remember{
+            emailTextField.text = UserDefaults.standard.string(forKey: "email")
+            passwordTextField.text = UserDefaults.standard.string(forKey: "password")
+            rememberSwitch.setOn(true, animated: true)
+        }
     }
     
     @IBAction func forgotPasswordTapped(_ sender: Any) {
@@ -50,6 +56,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func rememberChanged(_ sender: UISwitch) {
+        if !sender.isOn{
+            rememberUser()
+        }
+    }
+    
+    
     @IBAction func registerNowTapped(_ sender: Any) {
         performSegue(withIdentifier: "loginToRegister", sender: self)
     }
@@ -61,13 +74,13 @@ class LoginViewController: UIViewController {
     func checkFields() -> Bool {
         
         if (emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
-            showMessage("Sign In", "Email is required", "OK")
+            showMessage("Login", "Email is required", "OK")
             emailTextField.becomeFirstResponder()
             return false
         }
         
         if (passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
-            showMessage("Sign In", "Password is required", "OK")
+            showMessage("Login", "Password is required", "OK")
             passwordTextField.becomeFirstResponder()
             return false
         }
@@ -81,10 +94,14 @@ class LoginViewController: UIViewController {
             if error == nil{
                 if let auth = authResult{
                     print("Sign in success: \(auth.user)")
+                    self!.rememberUser()
+                    let alert = UIAlertController(title: "Login", message: "Login successful", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: {(alert: UIAlertAction!) in self!.navigationController?.popViewController(animated: true)}))
+                    self!.present(alert, animated: true, completion: nil)
                 }
             }else{
                 print("Error signing in: \(error!)")
-                self!.showMessage("Sign In", error!.localizedDescription, "OK")
+                self!.showMessage("Login", error!.localizedDescription, "OK")
             }
         }
     }
@@ -102,4 +119,18 @@ class LoginViewController: UIViewController {
     @objc func tapFacebookSignIn(){
         print("Facebook Sign In")
     }
+    
+    func rememberUser(){
+        if rememberSwitch.isOn{
+            UserDefaults.standard.setValue(email, forKey: "email")
+            UserDefaults.standard.setValue(password, forKey: "password")
+            UserDefaults.standard.setValue(true, forKey: "remember")
+        }else{
+            UserDefaults.standard.setValue(email, forKey: "")
+            UserDefaults.standard.setValue(password, forKey: "")
+            UserDefaults.standard.setValue(false, forKey: "remember")
+        }
+    }
+    
+    
 }

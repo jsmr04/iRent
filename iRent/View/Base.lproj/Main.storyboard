@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBg-0p-x6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="-528"/>
+            <point key="canvasLocation" x="-509" y="-556"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N5n-dS-Pdn">
@@ -286,7 +286,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ceJ-zB-8Ol">
-                                <rect key="frame" x="0.0" y="126" width="414" height="619"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="653"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Address, neighbourhood or city" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-u6-v35">
@@ -294,7 +294,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="No2-eK-Jgx">
-                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem image="magnifyingglass" catalog="system" id="UU7-xO-GD8"/>
@@ -529,6 +529,9 @@
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gzS-TA-GCg">
                                 <rect key="frame" x="16" y="428" width="51" height="31"/>
+                                <connections>
+                                    <action selector="rememberChanged:" destination="zYK-ps-rzu" eventType="valueChanged" id="JUq-B3-Ywb"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-HX-zBX">
                                 <rect key="frame" x="72" y="433" width="100" height="18"/>
@@ -633,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvl-W9-tWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="-1219.4196428571429"/>
+            <point key="canvasLocation" x="245" y="-1219"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Uzr-BL-EmF">
@@ -731,7 +734,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4F-kq-fE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782.60869565217399" y="-1219.4196428571429"/>
+            <point key="canvasLocation" x="941" y="-1219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yka-wk-IXo">
