@@ -62,7 +62,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
     @IBAction func registerNowTapped(_ sender: Any) {
         performSegue(withIdentifier: "loginToRegister", sender: self)
     }
