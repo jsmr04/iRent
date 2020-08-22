@@ -7,6 +7,7 @@ target 'iRent' do
 
   # Pods for iRent
   #pod 'FloatingButtonPOP-swift'
+  pod 'TextFieldEffects'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'

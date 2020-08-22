@@ -13,7 +13,9 @@ class MapViewController: UIViewController {
     var userLoggedIn = false
     
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapFloatingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,13 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
         mapFloatingButton.backgroundColor = UIColor(named: "RedMain")
         mapFloatingButton.layer.cornerRadius = mapFloatingButton.frame.height / 2
+        
+        searchBar.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        searchBar.layer.cornerRadius = 10
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBAction func floatingListClicked(_ sender: UIButton) {

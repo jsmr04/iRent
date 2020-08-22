@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstNameTextField.becomeFirstResponder()
         
         let user = Auth.auth().currentUser
         if let user = user {
