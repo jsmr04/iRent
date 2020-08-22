@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190C838D24F0A90300905C5D /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C838C24F0A90300905C5D /* PersonalViewController.swift */; };
 		193DC4B224F03FD900C4E03B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */; };
 		193DC4C124F041AB00C4E03B /* CreateProperty2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C024F041AB00C4E03B /* CreateProperty2ViewController.swift */; };
 		193DC4C324F041B400C4E03B /* CreatePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DC4C224F041B400C4E03B /* CreatePropertyViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190C838C24F0A90300905C5D /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ../../../../../Desktop/iRent/iRent/Controller/Menu/MenuTableViewController.swift; sourceTree = "<group>"; };
 		193DC4C024F041AB00C4E03B /* CreateProperty2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProperty2ViewController.swift; sourceTree = "<group>"; };
 		193DC4C224F041B400C4E03B /* CreatePropertyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePropertyViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190C838B24F0A8DB00905C5D /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				190C838C24F0A90300905C5D /* PersonalViewController.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
 		193DC4BF24F0417100C4E03B /* MyProperties */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				193DC4B124F03FD900C4E03B /* MenuTableViewController.swift */,
+				190C838B24F0A8DB00905C5D /* Personal */,
 				193DC4BF24F0417100C4E03B /* MyProperties */,
 			);
 			path = Menu;
@@ -431,6 +442,7 @@
 				193DC4C324F041B400C4E03B /* CreatePropertyViewController.swift in Sources */,
 				6E2B5CE324EEF92300F3D11B /* SignUpViewController.swift in Sources */,
 				6EA1275D24ED68B600B06327 /* ViewController.swift in Sources */,
+				190C838D24F0A90300905C5D /* PersonalViewController.swift in Sources */,
 				6EA1275924ED68B600B06327 /* AppDelegate.swift in Sources */,
 				193DC4B224F03FD900C4E03B /* MenuTableViewController.swift in Sources */,
 				193DC4C824F0421100C4E03B /* MessageViewController.swift in Sources */,

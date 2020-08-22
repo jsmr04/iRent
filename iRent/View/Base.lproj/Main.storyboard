@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="-3136" y="-263"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal-->
         <scene sceneID="Nen-nH-MJ1">
             <objects>
-                <viewController id="miy-3b-NGI" sceneMemberID="viewController">
+                <viewController id="miy-3b-NGI" customClass="PersonalViewController" customModule="iRent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YUa-DD-hRS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,21 +344,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="unx-kn-vmb">
+                                <rect key="frame" x="107" y="60" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2II-Hv-2nV"/>
+                                    <constraint firstAttribute="width" constant="200" id="4Wo-yh-Rfe"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="muz-aG-wNm" firstAttribute="centerY" secondItem="YUa-DD-hRS" secondAttribute="centerY" id="3D0-rh-Bco"/>
                             <constraint firstItem="muz-aG-wNm" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="CWU-8m-AEa"/>
+                            <constraint firstItem="unx-kn-vmb" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="CqM-E4-gag"/>
+                            <constraint firstItem="unx-kn-vmb" firstAttribute="top" secondItem="9g3-jr-Dm7" secondAttribute="top" constant="60" id="co0-NK-r0u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9g3-jr-Dm7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uHU-I3-83D"/>
+                    <navigationItem key="navigationItem" title="Personal" id="uHU-I3-83D"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="userImage" destination="unx-kn-vmb" id="ypy-J6-b55"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHG-lv-N0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4197" y="1002"/>
+            <point key="canvasLocation" x="4195.652173913044" y="1001.7857142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xuy-en-vST">
@@ -1491,11 +1503,12 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>
+        <image name="user" width="700" height="420"/>
         <namedColor name="BlackWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RedMain">
-            <color red="0.9137254901960784" green="0.24705882352941178" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91399997472763062" green="0.24699999392032623" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
