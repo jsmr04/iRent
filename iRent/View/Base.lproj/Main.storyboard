@@ -338,26 +338,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muz-aG-wNm">
-                                <rect key="frame" x="140.66666666666666" y="341" width="132.99999999999997" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="unx-kn-vmb">
-                                <rect key="frame" x="107" y="60" width="200" height="200"/>
+                                <rect key="frame" x="107" y="45" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="2II-Hv-2nV"/>
                                     <constraint firstAttribute="width" constant="200" id="4Wo-yh-Rfe"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jhon " borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-LJ-vPY" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="344" width="171" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="q8w-s8-PI6"/>
+                                    <constraint firstAttribute="height" constant="55" id="tU2-3c-LYl"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+1 647 998 8838" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-2K-AWI" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="424" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="S88-jc-cv7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-T9-Y8X">
+                                <rect key="frame" x="147" y="646" width="120" height="55"/>
+                                <color key="backgroundColor" name="RedMain"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="K6q-Q0-hzV"/>
+                                    <constraint firstAttribute="height" constant="55" id="ZEa-Nn-llG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save" image="checkmark.circle.fill" catalog="system">
+                                    <color key="titleColor" name="BlackWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfG-Cw-t4l">
+                                <rect key="frame" x="174.66666666666666" y="253" width="65" height="15"/>
+                                <color key="backgroundColor" name="YellowMain"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="qTX-7l-1mp"/>
+                                    <constraint firstAttribute="height" constant="15" id="r0P-8W-mUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="tintColor" name="RedMain"/>
+                                <state key="normal" title="Premium">
+                                    <color key="titleColor" name="RedMain"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Smith" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHa-mr-R2o" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="223" y="344" width="171" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="SiD-iP-Ep0"/>
+                                    <constraint firstAttribute="height" constant="55" id="mHS-Zb-AS6"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="muz-aG-wNm" firstAttribute="centerY" secondItem="YUa-DD-hRS" secondAttribute="centerY" id="3D0-rh-Bco"/>
-                            <constraint firstItem="muz-aG-wNm" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="CWU-8m-AEa"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="Bk3-2K-AWI" secondAttribute="trailing" constant="20" id="7iK-2C-QF7"/>
+                            <constraint firstItem="unx-kn-vmb" firstAttribute="top" secondItem="9g3-jr-Dm7" secondAttribute="top" constant="45" id="8zS-py-cgf"/>
                             <constraint firstItem="unx-kn-vmb" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="CqM-E4-gag"/>
-                            <constraint firstItem="unx-kn-vmb" firstAttribute="top" secondItem="9g3-jr-Dm7" secondAttribute="top" constant="60" id="co0-NK-r0u"/>
+                            <constraint firstItem="oqn-T9-Y8X" firstAttribute="top" secondItem="Bk3-2K-AWI" secondAttribute="bottom" constant="167" id="EFR-Wv-ofl"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="FF6-6P-EDH"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="bottom" secondItem="oqn-T9-Y8X" secondAttribute="bottom" constant="24" id="J47-OH-naU"/>
+                            <constraint firstItem="LfG-Cw-t4l" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="MWi-k9-BWs"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="cHa-mr-R2o" secondAttribute="trailing" constant="20" id="MZ7-ce-6Jv"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="cHa-mr-R2o" secondAttribute="trailing" constant="20" id="N5K-6Q-PQL"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="fl9-LJ-vPY" secondAttribute="bottom" constant="25" id="NmR-hH-mrA"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="cHa-mr-R2o" secondAttribute="bottom" constant="25" id="XAa-lY-SOc"/>
+                            <constraint firstItem="fl9-LJ-vPY" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="bgz-95-mcs"/>
+                            <constraint firstItem="oqn-T9-Y8X" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="cKP-2z-bUm"/>
+                            <constraint firstItem="cHa-mr-R2o" firstAttribute="leading" secondItem="fl9-LJ-vPY" secondAttribute="trailing" constant="32" id="i7W-TH-Elj"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="Bk3-2K-AWI" secondAttribute="trailing" constant="20" id="k9T-Bc-9xW"/>
+                            <constraint firstItem="fl9-LJ-vPY" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="oBN-Jc-Ahc"/>
+                            <constraint firstItem="LfG-Cw-t4l" firstAttribute="top" secondItem="unx-kn-vmb" secondAttribute="bottom" constant="8" id="r26-DZ-M69"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="wSt-Oo-9q1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9g3-jr-Dm7"/>
                     </view>
@@ -1487,6 +1583,7 @@
         <segue reference="5y4-se-HnS"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="creditcard" catalog="system" width="128" height="91"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="facebook_logo" width="512" height="512"/>
@@ -1509,6 +1606,9 @@
         </namedColor>
         <namedColor name="RedMain">
             <color red="0.91399997472763062" green="0.24699999392032623" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="YellowMain">
+            <color red="1" green="0.87058823529411766" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
