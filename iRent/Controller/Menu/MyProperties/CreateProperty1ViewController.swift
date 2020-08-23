@@ -22,7 +22,6 @@ class CreateProperty1ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let annotation = MKPointAnnotation()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,16 +78,57 @@ class CreateProperty1ViewController: UIViewController {
     }
     
     @IBAction func continueTapped(_ sender: UIButton) {
-        AppDelegate.shared().property.address = addressTextField.text!
-        AppDelegate.shared().property.city = cityTextField.text!
-        AppDelegate.shared().property.province = provinceTextField.text!
-        AppDelegate.shared().property.country = countryTextField.text!
-        AppDelegate.shared().property.postalCode = postalCodeTextField.text!
-        
-        performSegue(withIdentifier: "goToFeatures", sender: self)
+        if checkFields(){
+            AppDelegate.shared().property.address = addressTextField.text!
+            AppDelegate.shared().property.city = cityTextField.text!
+            AppDelegate.shared().property.province = provinceTextField.text!
+            AppDelegate.shared().property.country = countryTextField.text!
+            AppDelegate.shared().property.postalCode = postalCodeTextField.text!
+            
+            performSegue(withIdentifier: "goToFeatures", sender: self)
+        }
     }
     
-
+    func checkFields() -> Bool{
+        if (addressTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Address is required", "OK")
+            addressTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (cityTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "City is required", "OK")
+            cityTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (provinceTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Province is required", "OK")
+            provinceTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (countryTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Country is required", "OK")
+            countryTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (postalCodeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Postal Code is required", "OK")
+            postalCodeTextField.becomeFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+    
+    func showMessage(_ title:String, _ message:String, _ actionMessage:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension CreateProperty1ViewController:CLLocationManagerDelegate{

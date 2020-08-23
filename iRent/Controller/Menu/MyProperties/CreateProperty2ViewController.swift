@@ -44,16 +44,18 @@ class CreateProperty2ViewController: UIViewController {
     }
     
     @IBAction func continueTapped(_ sender: UIButton) {
-        AppDelegate.shared().property.rooms = bedroomTextField.text!
-        AppDelegate.shared().property.bathrooms = bathroomTextField.text!
-        AppDelegate.shared().property.parkingSpot = parkingSpotTextField.text!
-        
-        let alert = UIAlertController(title: "Property", message:"Do you want to post this property?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Yes"), style: .default,handler: { alert -> Void in
-            self.saveOnFirebase()
-        }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "No"), style: .default))
-        self.present(alert, animated: true, completion: nil)
+        if checkFields(){
+            AppDelegate.shared().property.rooms = bedroomTextField.text!
+            AppDelegate.shared().property.bathrooms = bathroomTextField.text!
+            AppDelegate.shared().property.parkingSpot = parkingSpotTextField.text!
+            
+            let alert = UIAlertController(title: "Property", message:"Do you want to post this property?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Yes"), style: .default,handler: { alert -> Void in
+                self.saveOnFirebase()
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "No"), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func saveOnFirebase(){
@@ -77,11 +79,40 @@ class CreateProperty2ViewController: UIViewController {
                             "parkingSpots":AppDelegate.shared().property.parkingSpot,
                             "rooms":AppDelegate.shared().property.rooms,
                             "bathrooms":AppDelegate.shared().property.bathrooms,
+                            "status":"1",
             ]
             
             guard let key = ref.child("property").child(user.uid).childByAutoId().key else { return }
             ref.child("property").child(user.uid).child(key).setValue(property)
         }
+    }
+    
+    func checkFields() -> Bool{
+        if (bedroomTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Bedroom is required", "OK")
+            bedroomTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (bathroomTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Bathroom is required", "OK")
+            bathroomTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (parkingSpotTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Parking Spot is required", "OK")
+            parkingSpotTextField.becomeFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+    
+    func showMessage(_ title:String, _ message:String, _ actionMessage:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -134,6 +165,5 @@ extension CreateProperty2ViewController: UITableViewDataSource,UITableViewDelega
             print("default")
         }
     }
-    
     
 }

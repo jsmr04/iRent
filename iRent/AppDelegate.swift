@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var property = Property()
+    var propertyPhotos = [PropertyPhoto]()
     
     static func shared() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
