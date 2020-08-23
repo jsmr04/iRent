@@ -15,6 +15,7 @@ class CreatePropertyViewController: UIViewController {
     @IBOutlet weak var typePickerView: UIPickerView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var photoFloatingButton: UIButton!
+    @IBOutlet weak var priceTextView: UITextField!
     
     var types = ["Apartment", "House", "Basement"]
     
@@ -29,6 +30,20 @@ class CreatePropertyViewController: UIViewController {
     
     @IBAction func photoFloatingClicked(_ sender: UIButton) {
     
+    }
+    
+    @IBAction func continueTapped(_ sender: Any) {
+        AppDelegate.shared().property.title = titleTextField.text!
+        AppDelegate.shared().property.description = descriptionTextView.text!
+        AppDelegate.shared().property.price = priceTextView.text!
+        AppDelegate.shared().property.type = types[typePickerView.selectedRow(inComponent: 0)]
+        
+        performSegue(withIdentifier: "goToAddress", sender: self)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     /*
     // MARK: - Navigation
