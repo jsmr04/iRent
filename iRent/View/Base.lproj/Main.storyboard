@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -345,37 +345,6 @@
                                     <constraint firstAttribute="width" constant="200" id="4Wo-yh-Rfe"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jhon " borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-LJ-vPY" customClass="MadokaTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="344" width="171" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="171" id="q8w-s8-PI6"/>
-                                    <constraint firstAttribute="height" constant="55" id="tU2-3c-LYl"/>
-                                </constraints>
-                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="RedMain"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+1 647 998 8838" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-2K-AWI" customClass="MadokaTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="424" width="374" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="S88-jc-cv7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="RedMain"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-T9-Y8X">
                                 <rect key="frame" x="147" y="646" width="120" height="55"/>
                                 <color key="backgroundColor" name="RedMain"/>
@@ -415,8 +384,26 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jhon " borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-LJ-vPY" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="331" width="171" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="q8w-s8-PI6"/>
+                                    <constraint firstAttribute="height" constant="55" id="tU2-3c-LYl"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Smith" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHa-mr-R2o" customClass="MadokaTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="223" y="344" width="171" height="55"/>
+                                <rect key="frame" x="223" y="331" width="171" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="SiD-iP-Ep0"/>
                                     <constraint firstAttribute="height" constant="55" id="mHS-Zb-AS6"/>
@@ -433,26 +420,75 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+1 647 998 8838" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFm-kZ-Q4T" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="471" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="R1d-Zb-k4b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="09/15/1966" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-2K-AWI" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="401" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="S88-jc-cv7"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jhonsmith@gmail.com" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faU-dh-dpi" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="541" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5mg-PY-TJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="RedMain"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="Bk3-2K-AWI" secondAttribute="trailing" constant="20" id="7iK-2C-QF7"/>
                             <constraint firstItem="unx-kn-vmb" firstAttribute="top" secondItem="9g3-jr-Dm7" secondAttribute="top" constant="45" id="8zS-py-cgf"/>
+                            <constraint firstItem="RFm-kZ-Q4T" firstAttribute="top" secondItem="Bk3-2K-AWI" secondAttribute="bottom" constant="15" id="9TY-Ry-syH"/>
+                            <constraint firstItem="oqn-T9-Y8X" firstAttribute="top" secondItem="faU-dh-dpi" secondAttribute="bottom" constant="50" id="Aqd-jG-5Qr"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="cHa-mr-R2o" secondAttribute="bottom" constant="15" id="C3E-zX-TCR"/>
                             <constraint firstItem="unx-kn-vmb" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="CqM-E4-gag"/>
-                            <constraint firstItem="oqn-T9-Y8X" firstAttribute="top" secondItem="Bk3-2K-AWI" secondAttribute="bottom" constant="167" id="EFR-Wv-ofl"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="RFm-kZ-Q4T" secondAttribute="trailing" constant="20" id="EZ5-xb-Old"/>
                             <constraint firstItem="Bk3-2K-AWI" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="FF6-6P-EDH"/>
                             <constraint firstItem="9g3-jr-Dm7" firstAttribute="bottom" secondItem="oqn-T9-Y8X" secondAttribute="bottom" constant="24" id="J47-OH-naU"/>
                             <constraint firstItem="LfG-Cw-t4l" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="MWi-k9-BWs"/>
                             <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="cHa-mr-R2o" secondAttribute="trailing" constant="20" id="MZ7-ce-6Jv"/>
                             <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="cHa-mr-R2o" secondAttribute="trailing" constant="20" id="N5K-6Q-PQL"/>
-                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="fl9-LJ-vPY" secondAttribute="bottom" constant="25" id="NmR-hH-mrA"/>
-                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="cHa-mr-R2o" secondAttribute="bottom" constant="25" id="XAa-lY-SOc"/>
                             <constraint firstItem="fl9-LJ-vPY" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="bgz-95-mcs"/>
                             <constraint firstItem="oqn-T9-Y8X" firstAttribute="centerX" secondItem="YUa-DD-hRS" secondAttribute="centerX" id="cKP-2z-bUm"/>
+                            <constraint firstItem="Bk3-2K-AWI" firstAttribute="top" secondItem="fl9-LJ-vPY" secondAttribute="bottom" constant="15" id="fw1-SC-J5K"/>
+                            <constraint firstItem="faU-dh-dpi" firstAttribute="top" secondItem="RFm-kZ-Q4T" secondAttribute="bottom" constant="15" id="g89-KB-FlI"/>
                             <constraint firstItem="cHa-mr-R2o" firstAttribute="leading" secondItem="fl9-LJ-vPY" secondAttribute="trailing" constant="32" id="i7W-TH-Elj"/>
                             <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="Bk3-2K-AWI" secondAttribute="trailing" constant="20" id="k9T-Bc-9xW"/>
                             <constraint firstItem="fl9-LJ-vPY" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="oBN-Jc-Ahc"/>
+                            <constraint firstItem="RFm-kZ-Q4T" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="pH8-HW-kvl"/>
+                            <constraint firstItem="faU-dh-dpi" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="pZt-mt-yKA"/>
                             <constraint firstItem="LfG-Cw-t4l" firstAttribute="top" secondItem="unx-kn-vmb" secondAttribute="bottom" constant="8" id="r26-DZ-M69"/>
+                            <constraint firstItem="9g3-jr-Dm7" firstAttribute="trailing" secondItem="faU-dh-dpi" secondAttribute="trailing" constant="20" id="rMw-Yx-ZG7"/>
                             <constraint firstItem="Bk3-2K-AWI" firstAttribute="leading" secondItem="9g3-jr-Dm7" secondAttribute="leading" constant="20" id="wSt-Oo-9q1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9g3-jr-Dm7"/>
@@ -461,6 +497,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
+                        <outlet property="dateBirthTextField" destination="Bk3-2K-AWI" id="RS6-tZ-1af"/>
+                        <outlet property="emailTextField" destination="faU-dh-dpi" id="fEa-8i-o3a"/>
+                        <outlet property="firstNameTextField" destination="fl9-LJ-vPY" id="rYg-ed-vxb"/>
+                        <outlet property="lastNameTextField" destination="cHa-mr-R2o" id="DcP-0h-FrE"/>
+                        <outlet property="phoneNumberTextField" destination="RFm-kZ-Q4T" id="2g1-Ov-mbb"/>
                         <outlet property="userImage" destination="unx-kn-vmb" id="ypy-J6-b55"/>
                     </connections>
                 </viewController>
@@ -1621,7 +1662,7 @@
             <color red="0.91399997472763062" green="0.24699999392032623" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YellowMain">
-            <color red="1" green="0.87058823529411766" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.87099999189376831" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
