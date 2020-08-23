@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CreatePropertyViewController: UIViewController {
 
@@ -15,11 +16,14 @@ class CreatePropertyViewController: UIViewController {
     @IBOutlet weak var typePickerView: UIPickerView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var photoFloatingButton: UIButton!
+    @IBOutlet weak var priceTextView: UITextField!
     
     var types = ["Apartment", "House", "Basement"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //propertyToLogin
         setUpTextView()
         typePickerView.delegate = self
         
@@ -27,8 +31,37 @@ class CreatePropertyViewController: UIViewController {
         photoFloatingButton.layer.cornerRadius = photoFloatingButton.frame.height / 2
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("User On?: \(isUserLoggedIn())")
+        if !isUserLoggedIn(){
+            performSegue(withIdentifier: "propertyToLogin", sender: self)
+        }
+    }
+    
     @IBAction func photoFloatingClicked(_ sender: UIButton) {
     
+    }
+    
+    @IBAction func continueTapped(_ sender: Any) {
+        AppDelegate.shared().property.title = titleTextField.text!
+        AppDelegate.shared().property.description = descriptionTextView.text!
+        AppDelegate.shared().property.price = priceTextView.text!
+        AppDelegate.shared().property.type = types[typePickerView.selectedRow(inComponent: 0)]
+        
+        performSegue(withIdentifier: "goToAddress", sender: self)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func isUserLoggedIn()->Bool{
+        if Auth.auth().currentUser != nil {
+            return true
+        }else{
+            return false
+        }
     }
     /*
     // MARK: - Navigation

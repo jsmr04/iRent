@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MenuTableViewController: UITableViewController {
-
+    var userLoggedIn = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +19,15 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        userLoggedIn = isUserLoggedIn()
+        if (userLoggedIn){
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        }else{
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(goToLogin))
+        }
     }
 
     // MARK: - Table view data source
@@ -30,6 +40,28 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 5
+    }
+    
+    
+    @objc func goToLogin(){
+        performSegue(withIdentifier: "menuToLogin", sender: self)
+    }
+    
+    @objc func logOut(){
+        do {
+            try Auth.auth().signOut()
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(goToLogin))
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
+    func isUserLoggedIn()->Bool{
+        if Auth.auth().currentUser != nil {
+            return true
+        }else{
+            return false
+        }
     }
 
     /*
@@ -87,7 +119,10 @@ class MenuTableViewController: UITableViewController {
     }
     */
     
+   
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         switch indexPath.row {
         case 0:
             performSegue(withIdentifier: "PersonalSegue", sender: self)
