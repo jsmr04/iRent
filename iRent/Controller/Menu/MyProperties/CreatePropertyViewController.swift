@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CreatePropertyViewController: UIViewController {
 
@@ -21,11 +22,20 @@ class CreatePropertyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //propertyToLogin
         setUpTextView()
         typePickerView.delegate = self
         
         photoFloatingButton.backgroundColor = UIColor(named: "RedMain")
         photoFloatingButton.layer.cornerRadius = photoFloatingButton.frame.height / 2
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("User On?: \(isUserLoggedIn())")
+        if !isUserLoggedIn(){
+            performSegue(withIdentifier: "propertyToLogin", sender: self)
+        }
     }
     
     @IBAction func photoFloatingClicked(_ sender: UIButton) {
@@ -44,6 +54,14 @@ class CreatePropertyViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    func isUserLoggedIn()->Bool{
+        if Auth.auth().currentUser != nil {
+            return true
+        }else{
+            return false
+        }
     }
     /*
     // MARK: - Navigation

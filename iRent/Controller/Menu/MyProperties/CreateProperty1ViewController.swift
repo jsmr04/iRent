@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class CreateProperty1ViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
@@ -86,6 +87,7 @@ class CreateProperty1ViewController: UIViewController {
         
         performSegue(withIdentifier: "goToFeatures", sender: self)
     }
+    
 
 }
 
@@ -113,9 +115,8 @@ extension CreateProperty1ViewController:UIGestureRecognizerDelegate,MKMapViewDel
                 withIdentifier: id, for: annotation) as? MKMarkerAnnotationView {
                 v.canShowCallout = true
                 v.image = #imageLiteral(resourceName: "logo1_small")
-                //v.glyphImage = #imageLiteral(resourceName: "home_default")
-                //v.markerTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                //v.glyphTintColor = UIColor.clear
+                v.markerTintColor = UIColor.clear
+                v.glyphTintColor = UIColor.clear
                 return v
             }
             return nil

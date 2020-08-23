@@ -219,6 +219,7 @@
                         <segue destination="ole-bD-lzA" kind="show" identifier="PaymentSegue" id="gCD-Pb-laB"/>
                         <segue destination="KxX-8U-r0N" kind="show" identifier="ComplaintSegue" id="Hp0-zc-IAO"/>
                         <segue destination="NL0-Jo-k8f" kind="show" identifier="MyPropertySegue" id="XX4-nO-PW8"/>
+                        <segue destination="zYK-ps-rzu" kind="show" identifier="menuToLogin" id="imd-S6-Upy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psl-2w-jZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -280,7 +281,6 @@
                     <connections>
                         <outlet property="mapFloatingButton" destination="ueA-LG-Wk5" id="RMX-WD-GYG"/>
                         <outlet property="searchBar" destination="AvF-pl-6oO" id="GUx-AH-W0n"/>
-                        <segue destination="zYK-ps-rzu" kind="show" identifier="mapToLogin" id="mYZ-Ht-j1q"/>
                         <segue destination="fzW-ul-g6J" kind="show" identifier="ListPropertiesSegue" id="VsP-vD-pCm"/>
                     </connections>
                 </viewController>
@@ -288,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="-7391.3043478260879" y="-607.36607142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="N5n-dS-Pdn">
             <objects>
-                <tabBarController id="byG-Jv-aUU" sceneMemberID="viewController">
+                <tabBarController id="byG-Jv-aUU" customClass="TabViewController" customModule="iRent" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pfV-O0-fQf">
                         <barButtonItem key="backBarButtonItem" id="FHG-LL-q0m"/>
                     </navigationItem>
@@ -312,7 +312,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uex-fa-WyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="-2383"/>
+            <point key="canvasLocation" x="-691" y="-2437"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ByH-lm-kqm">
@@ -460,7 +460,7 @@
         <scene sceneID="XbE-uv-2gO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2EW-DB-KRZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="message" catalog="system" id="b1i-u0-US8"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="" image="message" catalog="system" id="b1i-u0-US8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Hgm-yw-GyW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -528,7 +528,7 @@
                                     <constraint firstAttribute="height" constant="55" id="QrG-rv-mmt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="RedMain"/>
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvl-W9-tWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8900" y="-1069.4196428571429"/>
+            <point key="canvasLocation" x="8309" y="-18"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Uzr-BL-EmF">
@@ -867,6 +867,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o92-Ir-nRb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M9r-rH-ZX9"/>
                     <connections>
                         <outlet property="confirmPasswordTextFIeld" destination="H8W-DN-Mi8" id="JWo-pb-YLR"/>
                         <outlet property="emailTextField" destination="rAo-UR-ht5" id="orp-Kc-IiL"/>
@@ -878,13 +879,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4F-kq-fE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8900" y="-161.38392857142856"/>
+            <point key="canvasLocation" x="9394" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yka-wk-IXo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cUx-46-4Kp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="Cez-AS-1yh"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="magnifyingglass" catalog="system" id="Cez-AS-1yh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8F2-j0-gGc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -908,7 +909,7 @@
         <scene sceneID="McK-36-Rka">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eeS-WS-ile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="Hk3-Vr-gKG"/>
+                    <tabBarItem key="tabBarItem" tag="5" title="" image="person" catalog="system" id="Hk3-Vr-gKG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ozg-SW-PL8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1177,11 +1178,12 @@
                         <outlet property="titleTextField" destination="wsK-Md-aYl" id="fho-Vd-cZ5"/>
                         <outlet property="typePickerView" destination="Jlt-RR-Xxm" id="W0x-Jw-Xbh"/>
                         <segue destination="LFl-yJ-0zf" kind="show" identifier="goToAddress" id="6H6-c3-DHr"/>
+                        <segue destination="zYK-ps-rzu" kind="show" identifier="propertyToLogin" id="ptx-1X-nlJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MML-FY-PHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959" y="-238"/>
+            <point key="canvasLocation" x="-959" y="-263"/>
         </scene>
         <!--Create Property2 View Controller-->
         <scene sceneID="kuS-cT-IXm">
@@ -1328,7 +1330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkT-Iv-QCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959.4202898550725" y="1239.5089285714284"/>
+            <point key="canvasLocation" x="-959" y="1329"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jI3-XS-EPJ">
@@ -1349,13 +1351,14 @@
         <scene sceneID="VOS-lM-fSG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZx-ym-E4T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" image="plus" catalog="system" id="y3S-8F-opy">
+                    <tabBarItem key="tabBarItem" tag="3" title="Post" image="plus" catalog="system" id="y3S-8F-opy">
                         <color key="badgeColor" name="RedMain"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dnG-tm-gxA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BlackWhite"/>
                         <color key="barTintColor" name="RedMain"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="BlackWhite"/>
@@ -1368,13 +1371,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic3-1y-U4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="-1029.2410714285713"/>
+            <point key="canvasLocation" x="-959" y="-1029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUK-ny-3aO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hWG-cD-cyB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="star" catalog="system" id="0nv-g5-285">
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="star" catalog="system" id="0nv-g5-285">
                         <color key="badgeColor" name="RedMain"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1404,8 +1407,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0o-CW-fGD">
-                                <rect key="frame" x="0.0" y="684" width="414" height="41"/>
+                                <rect key="frame" x="0.0" y="675" width="414" height="50"/>
                                 <color key="backgroundColor" name="RedMain"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Eob-LW-DMV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1415,7 +1421,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dG-N2-7yn">
-                                <rect key="frame" x="0.0" y="227" width="414" height="449"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="440"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fl7-6x-85t">
                                 <rect key="frame" x="20" y="17" width="374" height="34"/>
@@ -1449,8 +1455,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2dG-N2-7yn" firstAttribute="leading" secondItem="w2u-vZ-hHL" secondAttribute="leading" id="1pJ-xe-hsY"/>
-                            <constraint firstItem="R0o-CW-fGD" firstAttribute="top" secondItem="2dG-N2-7yn" secondAttribute="bottom" constant="8" id="23F-NJ-iaQ"/>
                             <constraint firstItem="XaC-vc-ieq" firstAttribute="leading" secondItem="w2u-vZ-hHL" secondAttribute="leading" constant="20" id="3Df-qP-J0J"/>
+                            <constraint firstItem="R0o-CW-fGD" firstAttribute="top" secondItem="2dG-N2-7yn" secondAttribute="bottom" constant="8" id="5kV-FC-h4I"/>
                             <constraint firstItem="w2u-vZ-hHL" firstAttribute="trailing" secondItem="xe2-pO-ROn" secondAttribute="trailing" constant="20" id="6pV-6H-Dgc"/>
                             <constraint firstItem="2dG-N2-7yn" firstAttribute="trailing" secondItem="w2u-vZ-hHL" secondAttribute="trailing" id="8Rm-8S-tG8"/>
                             <constraint firstItem="xe2-pO-ROn" firstAttribute="leading" secondItem="w2u-vZ-hHL" secondAttribute="leading" constant="20" id="BNV-Wn-JD2"/>
@@ -1486,10 +1492,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mng-be-y6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959" y="477"/>
+            <point key="canvasLocation" x="-959.4202898550725" y="547.76785714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ptx-1X-nlJ"/>
         <segue reference="5y4-se-HnS"/>
     </inferredMetricsTieBreakers>
     <resources>

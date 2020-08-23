@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Firebase
+import FirebaseAuth
 
 class CreateProperty2ViewController: UIViewController {
     
@@ -57,32 +57,31 @@ class CreateProperty2ViewController: UIViewController {
     }
     
     func saveOnFirebase(){
-        let property = ["title":AppDelegate.shared().property.title,
-                        "description":AppDelegate.shared().property.description,
-                        "type":AppDelegate.shared().property.type,
-                        "address":AppDelegate.shared().property.address,
-                        "country":AppDelegate.shared().property.country,
-                        "province":AppDelegate.shared().property.province,
-                        "city":AppDelegate.shared().property.city,
-                        "postalCode":AppDelegate.shared().property.postalCode,
-                        "location":"43.7729953,-79.4366271",
-                        "price":AppDelegate.shared().property.price,
-                        "created":Common.getDateTime("DATE") + " " + Common.getDateTime("TIME"),
-                        "heating":AppDelegate.shared().property.heating,
-                        "balcony":AppDelegate.shared().property.balcony,
-                        "fireplace":AppDelegate.shared().property.fireplace,
-                        "airConditioning":AppDelegate.shared().property.airConditioning,
-                        "laundry":AppDelegate.shared().property.laundry,
-                        "parkingSpots":AppDelegate.shared().property.parkingSpot,
-                        "rooms":AppDelegate.shared().property.rooms,
-                        "bathrooms":AppDelegate.shared().property.bathrooms,
-                        "availableFrom":"2020-09-01 00:00:00",
-                        "availableTo":"2021-08-31 00:00:00",
-        ]
-        
-        guard let key = ref.child("property").child("jsmr04gmailcom").childByAutoId().key else { return }
-        ref.child("property").child("jsmr04gmailcom").child(key).setValue(property)
-
+        if let user = Auth.auth().currentUser{
+            let property = ["title":AppDelegate.shared().property.title,
+                            "description":AppDelegate.shared().property.description,
+                            "type":AppDelegate.shared().property.type,
+                            "address":AppDelegate.shared().property.address,
+                            "country":AppDelegate.shared().property.country,
+                            "province":AppDelegate.shared().property.province,
+                            "city":AppDelegate.shared().property.city,
+                            "postalCode":AppDelegate.shared().property.postalCode,
+                            "location":AppDelegate.shared().property.location,
+                            "price":AppDelegate.shared().property.price,
+                            "created":Common.getDateTime("DATE") + " " + Common.getDateTime("TIME"),
+                            "heating":AppDelegate.shared().property.heating,
+                            "balcony":AppDelegate.shared().property.balcony,
+                            "fireplace":AppDelegate.shared().property.fireplace,
+                            "airConditioning":AppDelegate.shared().property.airConditioning,
+                            "laundry":AppDelegate.shared().property.laundry,
+                            "parkingSpots":AppDelegate.shared().property.parkingSpot,
+                            "rooms":AppDelegate.shared().property.rooms,
+                            "bathrooms":AppDelegate.shared().property.bathrooms,
+            ]
+            
+            guard let key = ref.child("property").child(user.uid).childByAutoId().key else { return }
+            ref.child("property").child(user.uid).child(key).setValue(property)
+        }
     }
 }
 
