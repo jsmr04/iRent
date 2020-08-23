@@ -23,7 +23,7 @@ class ListViewController: UIViewController {
     
 
     @IBAction func floatingButtonClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "MapPropertiesSegue", sender: self)
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
