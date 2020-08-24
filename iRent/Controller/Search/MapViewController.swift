@@ -12,7 +12,6 @@ import FirebaseAuth
 class MapViewController: UIViewController {
     var userLoggedIn = false
     
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapFloatingButton: UIButton!
     
