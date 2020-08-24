@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         googleSignInImageView.isUserInteractionEnabled = true
         let tapGoogleRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGoogleSignIn))
         googleSignInImageView.addGestureRecognizer(tapGoogleRecognizer)
@@ -40,6 +41,16 @@ class LoginViewController: UIViewController {
             passwordTextField.text = UserDefaults.standard.string(forKey: "password")
             rememberSwitch.setOn(true, animated: true)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = UIColor(named: "RedMain")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = UIColor(named: "RedMain")
+        navigationController?.navigationBar.tintColor = .white
     }
     
     @IBAction func forgotPasswordTapped(_ sender: Any) {
