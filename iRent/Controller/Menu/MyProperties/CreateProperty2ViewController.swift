@@ -19,19 +19,21 @@ class CreateProperty2ViewController: UIViewController {
     @IBOutlet weak var bathroomTextField: UITextField!
     @IBOutlet weak var parkingSpotTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-
     
-    var ref: DatabaseReference!
+    
+    var refProperty: DatabaseReference!
+    var refPhoto: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
+        refProperty = Database.database().reference()
+        refPhoto = Database.database().reference()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
+    
     @IBAction func bedroomChanged(_ sender: UIStepper) {
         bedroomTextField.text = String(Int(sender.value))
     }
@@ -45,16 +47,18 @@ class CreateProperty2ViewController: UIViewController {
     }
     
     @IBAction func continueTapped(_ sender: UIButton) {
-        AppDelegate.shared().property.rooms = bedroomTextField.text!
-        AppDelegate.shared().property.bathrooms = bathroomTextField.text!
-        AppDelegate.shared().property.parkingSpot = parkingSpotTextField.text!
-        
-        let alert = UIAlertController(title: "Property", message:"Do you want to post this property?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Yes"), style: .default,handler: { alert -> Void in
-            self.saveOnFirebase()
-        }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "No"), style: .default))
-        self.present(alert, animated: true, completion: nil)
+        if checkFields(){
+            AppDelegate.shared().property.rooms = bedroomTextField.text!
+            AppDelegate.shared().property.bathrooms = bathroomTextField.text!
+            AppDelegate.shared().property.parkingSpot = parkingSpotTextField.text!
+            
+            let alert = UIAlertController(title: "Property", message:"Do you want to post this property?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Yes"), style: .default,handler: { alert -> Void in
+                self.saveOnFirebase()
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "No"), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func saveOnFirebase(){
@@ -78,11 +82,79 @@ class CreateProperty2ViewController: UIViewController {
                             "parkingSpots":AppDelegate.shared().property.parkingSpot,
                             "rooms":AppDelegate.shared().property.rooms,
                             "bathrooms":AppDelegate.shared().property.bathrooms,
+                            "status":"1",
             ]
             
-            guard let key = ref.child("property").child(user.uid).childByAutoId().key else { return }
-            ref.child("property").child(user.uid).child(key).setValue(property)
+            guard let key = refProperty.child("property").child(user.uid).childByAutoId().key else { return }
+            refProperty.child("property").child(user.uid).child(key).setValue(property){
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                    self.showMessage("Post", "Ups! Something went wrong!", "OK")
+                } else {
+                    print("Data saved successfully!")
+                    
+                    for propertyPhoto in AppDelegate.shared().propertyPhotos{
+                        let photo = [
+                            "propertyId": key,
+                            "created": property["created"],
+                            "photo": propertyPhoto.photoString,
+                        ]
+                        
+                        guard let photoKey = self.refPhoto.child("propertyPhoto").child(user.uid).childByAutoId().key else { return }
+                        self.refPhoto.child("propertyPhoto").child(user.uid).child(photoKey).setValue(photo)
+                    }
+                    self.performSegue(withIdentifier: "goToProperties", sender: self)
+                }
+            }
         }
+    }
+    
+    func checkFields() -> Bool{
+        if (bedroomTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Bedroom is required", "OK")
+            bedroomTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (bathroomTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Bathroom is required", "OK")
+            bathroomTextField.becomeFirstResponder()
+            return false
+        }
+        
+        if (parkingSpotTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            showMessage("Post", "Parking Spot is required", "OK")
+            parkingSpotTextField.becomeFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+    
+    func showMessage(_ title:String, _ message:String, _ actionMessage:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showToast(message : String, font: UIFont) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-300, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 8.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 }
 
@@ -135,6 +207,5 @@ extension CreateProperty2ViewController: UITableViewDataSource,UITableViewDelega
             print("default")
         }
     }
-    
     
 }

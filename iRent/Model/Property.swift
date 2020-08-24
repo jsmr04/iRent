@@ -8,6 +8,7 @@
 
 import Foundation
 public class Property {
+    var id:String = ""
     var title:String = ""
     var description:String = ""
     var type:String = ""
