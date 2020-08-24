@@ -116,7 +116,7 @@ class CreatePropertyViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Photo Library", comment: "Photo Library"), style: .default, handler: { alert -> Void in
             self.openImagePicker(sourceType: .photoLibrary)
         }))
-            
+        
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -155,8 +155,32 @@ class CreatePropertyViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    @objc func deleteImage(sender: UISwipeGestureRecognizer){
+        print("Delete")
+        let cell = sender.view as! UICollectionViewCell
+        let indexPath = imageCollectionView.indexPath(for: cell)
+        let myreact = cell.frame
+        
+        if let indexP = indexPath{
+            
+            UIView.animate(withDuration: 0.8, delay:0.0, options: .curveEaseInOut, animations: {
+                cell.frame = CGRect(x: myreact.origin.x, y: myreact.origin.y-100, width: myreact.size.width, height: myreact.size.height)
+                cell.alpha = 0.0
+            },completion: { (finished: Bool) in
+                print(indexP.row)
+                //Deleting image
+                //self.deletedMedia.append(self.imagesData.remove(at: indexP.row).mediaId)
+                AppDelegate.shared().propertyPhotos.remove(at: indexP.row)
+                cell.frame = myreact
+                self.imageCollectionView.reloadData()
+                
+            })
+            
+        }
+    }
 }
+
 
 //MARK: - UITextView
 
@@ -240,48 +264,52 @@ extension CreatePropertyViewController:UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifer, for: indexPath) as! CustomCell
         
+        let UpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(deleteImage(sender:)))
+        UpSwipe.direction = UISwipeGestureRecognizer.Direction.up
+        cell.addGestureRecognizer(UpSwipe)
+        
         cell.data = AppDelegate.shared().propertyPhotos[indexPath.row]
         return cell
     }
     
     
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        print("KLK: \(indexPath.row)")
-//
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCell
-//
-//        let UpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(deleteImage(sender:)))
-//        UpSwipe.direction = UISwipeGestureRecognizer.Direction.up
-//        cell.addGestureRecognizer(UpSwipe)
-//
-//        //cell.clipsToBounds = true
-//        cell.data = imagesData[indexPath.row]
-//
-//        return cell
-//
-//    }
+    //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    //        print("KLK: \(indexPath.row)")
+    //
+    //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCell
+    //
+    //        let UpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(deleteImage(sender:)))
+    //        UpSwipe.direction = UISwipeGestureRecognizer.Direction.up
+    //        cell.addGestureRecognizer(UpSwipe)
+    //
+    //        //cell.clipsToBounds = true
+    //        cell.data = imagesData[indexPath.row]
+    //
+    //        return cell
+    //
+    //    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print("collectionView.frame.width = \(collectionView.frame.width)")
         print("collectionView.frame.height = \(collectionView.frame.height)")
         return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.height / 2)
         //return CGSize(width: 50, height: 50)
-//        return CGSize(width: view.frame.width , height: view.frame.height - (view.safeAreaInsets.top + view.safeAreaInsets.bottom))
+        //        return CGSize(width: view.frame.width , height: view.frame.height - (view.safeAreaInsets.top + view.safeAreaInsets.bottom))
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("KLK")
-//        return imagesData.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        indexImage = indexPath.row
-//        showImage()
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//
-//    }
+    //
+    //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    //        print("KLK")
+    //        return imagesData.count
+    //    }
+    //
+    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    //        indexImage = indexPath.row
+    //        showImage()
+    //    }
+    //
+    //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    //
+    //    }
 }
 
 class CustomCell: UICollectionViewCell{
@@ -313,7 +341,7 @@ class CustomCell: UICollectionViewCell{
         imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
