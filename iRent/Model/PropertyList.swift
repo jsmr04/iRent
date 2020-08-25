@@ -11,6 +11,7 @@ class PropertyList {
     var id:String = ""
     var title:String = ""
     var description:String = ""
+    var userId:String = ""
     var location:String = ""
     var photoString:String = ""
     var photo:UIImage?

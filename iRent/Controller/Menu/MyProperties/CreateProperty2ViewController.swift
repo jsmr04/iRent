@@ -50,7 +50,7 @@ class CreateProperty2ViewController: UIViewController {
         if checkFields(){
             AppDelegate.shared().property.rooms = bedroomTextField.text!
             AppDelegate.shared().property.bathrooms = bathroomTextField.text!
-            AppDelegate.shared().property.parkingSpot = parkingSpotTextField.text!
+            AppDelegate.shared().property.parkingSpots = parkingSpotTextField.text!
             
             let alert = UIAlertController(title: "Property", message:"Do you want to post this property?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Yes"), style: .default,handler: { alert -> Void in
@@ -79,9 +79,10 @@ class CreateProperty2ViewController: UIViewController {
                             "fireplace":AppDelegate.shared().property.fireplace,
                             "airConditioning":AppDelegate.shared().property.airConditioning,
                             "laundry":AppDelegate.shared().property.laundry,
-                            "parkingSpots":AppDelegate.shared().property.parkingSpot,
+                            "parkingSpots":AppDelegate.shared().property.parkingSpots,
                             "rooms":AppDelegate.shared().property.rooms,
                             "bathrooms":AppDelegate.shared().property.bathrooms,
+                            "landlordName": user.displayName,
                             "status":"1",
             ]
             
