@@ -95,7 +95,7 @@ class CreateProperty2ViewController: UIViewController {
                 } else {
                     print("Data saved successfully!")
                     
-                    for propertyPhoto in AppDelegate.shared().propertyPhotos{
+                    for propertyPhoto in AppDelegate.shared().selectedPhotos{
                         let photo = [
                             "propertyId": key,
                             "created": property["created"],

@@ -43,6 +43,9 @@ class CreatePropertyViewController: UIViewController {
         typePickerView.delegate = self
         title = "Post Property"
         
+        AppDelegate.shared().property = Property()
+        AppDelegate.shared().selectedPhotos.removeAll()
+        
         //TODO: Fix the size issue in the collection view
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -60,14 +63,14 @@ class CreatePropertyViewController: UIViewController {
         imageCollectionView.topAnchor.constraint(equalTo: typePickerView.bottomAnchor, constant: 0).isActive = true
         imageCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         imageCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        imageCollectionView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: 10).isActive = true
+        imageCollectionView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: 0).isActive = true
         imageCollectionView.heightAnchor.constraint(equalTo: imageCollectionView.widthAnchor, multiplier: 0.5).isActive = true
         
         photoFloatingButton.backgroundColor = UIColor(named: "RedMain")
         photoFloatingButton.layer.cornerRadius = photoFloatingButton.frame.height / 2
         
         AppDelegate.shared().property = Property()
-        AppDelegate.shared().propertyPhotos.removeAll()
+        AppDelegate.shared().selectedPhotos.removeAll()
         
     }
     
@@ -169,7 +172,7 @@ class CreatePropertyViewController: UIViewController {
                 print(indexP.row)
                 //Deleting image
                 //self.deletedMedia.append(self.imagesData.remove(at: indexP.row).mediaId)
-                AppDelegate.shared().propertyPhotos.remove(at: indexP.row)
+                AppDelegate.shared().selectedPhotos.remove(at: indexP.row)
                 cell.frame = myreact
                 self.imageCollectionView.reloadData()
                 
@@ -245,7 +248,7 @@ extension CreatePropertyViewController:UIImagePickerControllerDelegate,UINavigat
         propertyPhoto.created = ""
         
         print(Common.convertImageToBase64(image))
-        AppDelegate.shared().propertyPhotos.append(propertyPhoto)
+        AppDelegate.shared().selectedPhotos.append(propertyPhoto)
         imageCollectionView.reloadData()
     }
     
@@ -256,8 +259,8 @@ extension CreatePropertyViewController:UIImagePickerControllerDelegate,UINavigat
 
 extension CreatePropertyViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Count: \(AppDelegate.shared().propertyPhotos.count)")
-        return AppDelegate.shared().propertyPhotos.count
+        print("Count: \(AppDelegate.shared().selectedPhotos.count)")
+        return AppDelegate.shared().selectedPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -267,7 +270,7 @@ extension CreatePropertyViewController:UICollectionViewDataSource, UICollectionV
         UpSwipe.direction = UISwipeGestureRecognizer.Direction.up
         cell.addGestureRecognizer(UpSwipe)
         
-        cell.data = AppDelegate.shared().propertyPhotos[indexPath.row]
+        cell.data = AppDelegate.shared().selectedPhotos[indexPath.row]
         return cell
     }
     

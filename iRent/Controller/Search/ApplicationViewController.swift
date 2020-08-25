@@ -81,11 +81,23 @@ class ApplicationViewController: UIViewController {
     
     func submitApplication(){
         if let user = Auth.auth().currentUser{
+            var photo = ""
+            
+            if AppDelegate.shared().selectedPhotos.count > 0{
+                photo = AppDelegate.shared().selectedPhotos[0].photoString
+            }
+            
             let application = ["propertyId":AppDelegate.shared().property.id,
+                               "ownerId":user.uid,
                                "created":Common.getDateTime("DATE") + " " + Common.getDateTime("TIME"),
                                "offer": String(offerTextField.text!),
                                "comment": String(commentTextView.text),
+                               "status": "1",
+                               "photo": photo,
+                               "title":AppDelegate.shared().property.title,
+                               "address": AppDelegate.shared().property.address,
                                "applicantName": user.displayName,
+                               
                 ]
             
             guard let key = refApplication.child("application").child(user.uid).childByAutoId().key else { return }

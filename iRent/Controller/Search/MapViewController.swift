@@ -182,6 +182,7 @@ class MapViewController: UIViewController {
                                     AppDelegate.shared().propertyList.append(property)
                                     self.addAnnotation(propertyLocation.coordinate, property.title, property.id)
                                     
+                                    
                                 }
                             }
                         }
