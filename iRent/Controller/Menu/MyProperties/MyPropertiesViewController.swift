@@ -118,3 +118,5 @@ extension MyPropertiesViewController:UITableViewDelegate, UITableViewDataSource{
     
     
 }
+
+

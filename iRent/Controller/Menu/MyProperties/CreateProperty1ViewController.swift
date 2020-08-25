@@ -147,18 +147,18 @@ extension CreateProperty1ViewController:CLLocationManagerDelegate{
 
 extension CreateProperty1ViewController:UIGestureRecognizerDelegate,MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            print("Annotations")
-            
-            let id = MKMapViewDefaultAnnotationViewReuseIdentifier
-            
-            if let v = mapView.dequeueReusableAnnotationView(
-                withIdentifier: id, for: annotation) as? MKMarkerAnnotationView {
-                v.canShowCallout = true
-                v.image = #imageLiteral(resourceName: "logo1_small")
-                v.markerTintColor = UIColor.clear
-                v.glyphTintColor = UIColor.clear
-                return v
-            }
-            return nil
+        print("Annotations")
+        
+        let id = MKMapViewDefaultAnnotationViewReuseIdentifier
+        
+        if let v = mapView.dequeueReusableAnnotationView(
+            withIdentifier: id, for: annotation) as? MKMarkerAnnotationView {
+            v.canShowCallout = true
+            v.image = #imageLiteral(resourceName: "logo1_small")
+            v.markerTintColor = UIColor.clear
+            v.glyphTintColor = UIColor.clear
+            return v
         }
+        return nil
+    }
 }
