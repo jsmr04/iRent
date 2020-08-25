@@ -36,6 +36,17 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = UIColor(named: "RedMain")
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = UIColor(named: "RedMain")
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
     @IBAction func signUpTapped(_ sender: Any) {
         signUp()
     }

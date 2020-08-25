@@ -27,7 +27,6 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = true
         //print("Back button")
         // Do any additional setup after loading the view.
         mapFloatingButton.backgroundColor = UIColor(named: "RedMain")
@@ -47,12 +46,17 @@ class MapViewController: UIViewController {
         refPhoto = Database.database().reference()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
     @IBAction func floatingListClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "ListPropertiesSegue", sender: self)
+        //performSegue(withIdentifier: "ListPropertiesSegue", sender: self)
+        performSegue(withIdentifier: "PropertySegue", sender: self)
     }
     
     func userDidTapOnItem(at index: Int, with model: String) {
@@ -61,6 +65,9 @@ class MapViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationItem.hidesBackButton = false
         userLoggedIn = isUserLoggedIn()
         if (userLoggedIn){
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))

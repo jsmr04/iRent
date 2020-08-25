@@ -6,7 +6,7 @@ target 'iRent' do
   use_frameworks!
 
   # Pods for iRent
-  #pod 'FloatingButtonPOP-swift'
+  pod 'IQKeyboardManagerSwift'
   pod 'TextFieldEffects'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class MyPropertiesViewController: UIViewController {
     let cellIdentifier = "cell"

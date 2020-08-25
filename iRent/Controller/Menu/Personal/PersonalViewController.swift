@@ -11,6 +11,11 @@ import UIKit
 class PersonalViewController: UIViewController {
 
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var dateBirthTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.layer.borderWidth = 1.0

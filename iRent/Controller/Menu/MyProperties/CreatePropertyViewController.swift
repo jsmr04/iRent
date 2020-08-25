@@ -62,9 +62,6 @@ class CreatePropertyViewController: UIViewController {
         imageCollectionView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: 10).isActive = true
         imageCollectionView.heightAnchor.constraint(equalTo: imageCollectionView.widthAnchor, multiplier: 0.5).isActive = true
         
-        imageCollectionView.delegate = self
-        imageCollectionView.dataSource = self
-        
         photoFloatingButton.backgroundColor = UIColor(named: "RedMain")
         photoFloatingButton.layer.cornerRadius = photoFloatingButton.frame.height / 2
         
