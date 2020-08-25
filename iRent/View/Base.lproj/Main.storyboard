@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -280,6 +280,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapFloatingButton" destination="ueA-LG-Wk5" id="RMX-WD-GYG"/>
+                        <outlet property="mapView" destination="x9y-Dc-BLw" id="T7q-Xf-PdQ"/>
                         <outlet property="searchBar" destination="AvF-pl-6oO" id="GUx-AH-W0n"/>
                         <segue destination="fzW-ul-g6J" kind="presentation" identifier="ListPropertiesSegue" modalTransitionStyle="flipHorizontal" id="VsP-vD-pCm"/>
                         <segue destination="91N-3h-xJH" kind="show" identifier="PropertySegue" id="9bC-P8-rzn"/>
