@@ -55,8 +55,8 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func floatingListClicked(_ sender: UIButton) {
-        //performSegue(withIdentifier: "ListPropertiesSegue", sender: self)
-        performSegue(withIdentifier: "PropertySegue", sender: self)
+        performSegue(withIdentifier: "ListPropertiesSegue", sender: self)
+        //performSegue(withIdentifier: "PropertySegue", sender: self)
     }
     
     func userDidTapOnItem(at index: Int, with model: String) {

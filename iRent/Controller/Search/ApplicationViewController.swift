@@ -7,43 +7,109 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class ApplicationViewController: UIViewController {
-
+    
     @IBOutlet weak var propertyImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var offerTextField: UITextField!
     @IBOutlet weak var priceButton: UIButton!
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var applyButton: UIButton!
+    var refApplication: DatabaseReference!
+    
+    var property:Property?
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextView()
+        
+        refApplication = Database.database().reference()
+        
         // Do any additional setup after loading the view.
         applyButton.setImage(nil, for: .normal)
         applyButton.setTitle("Continue", for: .normal)
         
+        property = AppDelegate.shared().property
+        fillFields()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fillFields(){
+        if let p = property{
+            titleLabel.text = p.title
+            offerTextField.text = p.price
+            
+            if AppDelegate.shared().selectedPhotos.count > 0{
+                propertyImageView.image = AppDelegate.shared().selectedPhotos[0].photo
+            }
+            
+            if let price = Double(p.price){
+                let formattedPrice =  String(format: "C$ %.02f/mo", price)
+                priceButton.setTitle(formattedPrice, for: .normal)
+            }
+        }
+        
     }
-    */
-
+    
+    
     @IBAction func buttonClicked(_ sender: UIButton) {
         print(applyButton.titleLabel?.text)
         if(applyButton.titleLabel?.text == "Continue"){
-            performSegue(withIdentifier: "DocumentsRequestSegue", sender: nil)
+            //performSegue(withIdentifier: "DocumentsRequestSegue", sender: nil)
+            submitApplication()
         }
     }
     @IBAction func backAction(_ sender: UIButton) {
-       let _ = self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    func submitApplication(){
+        if let user = Auth.auth().currentUser{
+            let application = ["propertyId":AppDelegate.shared().property.id,
+                               "created":Common.getDateTime("DATE") + " " + Common.getDateTime("TIME"),
+                               "offer": String(offerTextField.text!),
+                               "comment": String(commentTextView.text),
+                ]
+            
+            guard let key = refApplication.child("application").child(user.uid).childByAutoId().key else { return }
+            refApplication.child("application").child(user.uid).child(key).setValue(application){
+                (error:Error?, ref:DatabaseReference) in
+                
+                if (error == nil){
+                    self.navigationController?.popToRootViewController(animated: true)
+                    self.showToast(message: "The application has been submitted.", font: .systemFont(ofSize: 12.0))
+                }else{
+                    self.showMessage("Application", error!.localizedDescription, "OK")
+                }
+            }
+        }
+    }
+    
+    func showMessage(_ title:String, _ message:String, _ actionMessage:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString(actionMessage, comment: actionMessage), style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showToast(message : String, font: UIFont) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-300, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 8.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 }
 

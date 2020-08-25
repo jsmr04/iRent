@@ -28,7 +28,6 @@ class PropertyViewController: UIViewController {
     @IBOutlet weak var heatingImageView: UIImageView!
     @IBOutlet weak var laundryImageView: UIImageView!
     @IBOutlet weak var locationMapView: MKMapView!
-    let images = [#imageLiteral(resourceName: "house_default"), #imageLiteral(resourceName: "house_default2")]
     let annotation = MKPointAnnotation()
     
     var refProperty: DatabaseReference!
@@ -136,15 +135,6 @@ class PropertyViewController: UIViewController {
        let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 // MARK: - CollectionViewController
