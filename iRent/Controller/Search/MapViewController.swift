@@ -106,11 +106,11 @@ class MapViewController: UIViewController {
         mapView.region = reg
     }
     
-    func addAnnotation(_ coordinate:CLLocationCoordinate2D, _ title:String) {
+    func addAnnotation(_ coordinate:CLLocationCoordinate2D, _ title:String, _ id:String) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = title
-        annotation.subtitle = ""
+        annotation.subtitle = id
         mapView.addAnnotation(annotation)
     }
     
@@ -130,6 +130,8 @@ class MapViewController: UIViewController {
         let distance = c1.distance(from: c2)
         
         AppDelegate.shared().propertyList.removeAll()
+        AppDelegate.shared().propertyPhotos.removeAll()
+        AppDelegate.shared().property = Property()
         
         refProperty.child("property").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -141,10 +143,6 @@ class MapViewController: UIViewController {
                         for propertyKey in propertyJson.allKeys{
                             
                             let p = propertyJson[propertyKey] as? NSDictionary
-                            
-                            let id = propertyKey as! String
-                            let title = p?["title"] as? String ?? ""
-                            let description = p?["description"] as? String ?? ""
                             let location = p?["location"] as? String ?? ""
                             
                             if location.contains(","){
@@ -155,94 +153,115 @@ class MapViewController: UIViewController {
                                 let dLong = Double(long)
                                 let propertyLocation = CLLocation(latitude: dLat!, longitude: dLong!)
                                 
-                                AppDelegate.shared().propertyList.removeAll()
-                                
                                 let propertyDistance = propertyLocation.distance(from: c1)
                                 if propertyDistance <= distance{
-                                    let propertyList = PropertyList()
-                                    propertyList.id = id
-                                    propertyList.title = title
-                                    propertyList.description = description
-                                    propertyList.location = location
                                     
-                                    AppDelegate.shared().propertyList.append(propertyList)
+                                    let property = Property()
+                                    property.id = propertyKey as! String
+                                    property.title = p?["title"] as? String ?? ""
+                                    property.description = p?["description"] as? String ?? ""
+                                    property.type = p?["type"] as? String ?? ""
+                                    property.price = p?["price"] as? String ?? ""
+                                    property.address = p?["address"] as? String ?? ""
+                                    property.country = p?["country"] as? String ?? ""
+                                    property.province = p?["province"] as? String ?? ""
+                                    property.city = p?["city"] as? String ?? ""
+                                    property.postalCode = p?["postalCode"] as? String ?? ""
+                                    property.location = p?["location"] as? String ?? ""
+                                    property.rooms = p?["rooms"] as? String ?? ""
+                                    property.bathrooms = p?["bathrooms"] as? String ?? ""
+                                    property.parkingSpots = p?["parkingSpots"] as? String ?? ""
+                                    property.heating = p?["heating"] as? String ?? ""
+                                    property.balcony = p?["balcony"] as? String ?? ""
+                                    property.fireplace = p?["fireplace"] as? String ?? ""
+                                    property.airConditioning = p?["airConditioning"] as? String ?? ""
+                                    property.laundry = p?["laundry"] as? String ?? ""
+                                    property.created = p?["created"] as? String ?? ""
+                                    property.landlordName = p?["landlordName"] as? String ?? ""
                                     
-                                    self.addAnnotation(propertyLocation.coordinate, title)
+                                    AppDelegate.shared().propertyList.append(property)
+                                    self.addAnnotation(propertyLocation.coordinate, property.title, property.id)
+                                    
                                 }
                             }
                         }
                     }
-                    
-                    //                        //Getting first photo
-                    //                        self.refPhoto.child("propertyPhoto").observeSingleEvent(of: .value, with: { (snapshot) in
-                    //                            if let valuePhoto = snapshot.value as? NSDictionary{
-                    //                                for keyPhoto in valuePhoto.allKeys{
-                    //                                    let pp = valuePhoto[keyPhoto] as? NSDictionary
-                    //
-                    //                                    let imageString = pp?["photo"] as? String ?? ""
-                    //                                    let propertyId = pp?["propertyId"] as? String ?? ""
-                    //
-                    //                                    print("id \(id) | propertyId \(propertyId)")
-                    //                                    if id == propertyId{
-                    //                                        let propertyPhoto = PropertyPhoto()
-                    //                                        propertyPhoto.photoString = imageString
-                    //                                        self.propertyPhotos.append(propertyPhoto)
-                    //                                        self.tableView.reloadData()
-                    //                                        break
-                    //                                    }
-                    //                                }
-                    //                            }
-                    //                        }) { (error) in
-                    //                            print(error.localizedDescription)
-                    //                        }
-                    
-                    //                        self.properties.append(property)
                 }
             }
-            
-            //self.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        refPhoto.child("propertyPhoto").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            if let value = snapshot.value as? NSDictionary{
+                print(value.allKeys)
+                for keyUser in value.allKeys{
+                    if let photoJson = value[keyUser] as? NSDictionary{
+                        
+                        for photoKey in photoJson.allKeys{
+                            let p = photoJson[photoKey] as? NSDictionary
+
+                            let propertyPhoto = PropertyPhoto()
+                            propertyPhoto.id = photoKey as! String
+                            propertyPhoto.propertyId = p?["propertyId"] as? String ?? ""
+                            propertyPhoto.photoString = p?["photo"] as? String ?? ""
+                            propertyPhoto.created = p?["created"] as? String ?? ""
+
+                            AppDelegate.shared().propertyPhotos.append(propertyPhoto)
+                        }
+                    }
+                }
+            }
             
         }) { (error) in
             print(error.localizedDescription)
         }
         
-        
-        
-        //        print("Coor: \(neCoord)")
-        //        print("Coor: \(swCoord)")
-        
-        //        addAnnotation(neCoord)
-        ////        addAnnotation(swCoord)
-        //        addAnnotation(midCoord)
     }
     
-    func getMidPoint(){
-        
-    }
 }
 
-
-
 extension MapViewController:UIGestureRecognizerDelegate,MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation?.subtitle)
+        
+        for p in AppDelegate.shared().propertyList{
+            if view.annotation?.subtitle == p.id{
+                AppDelegate.shared().property = p
+                break
+            }
+        }
+        
+        AppDelegate.shared().selectedPhotos.removeAll()
+        for ph in AppDelegate.shared().propertyPhotos{
+            if ph.propertyId == AppDelegate.shared().property.id{
+                ph.photo = Common.convertBase64ToImage(ph.photoString)
+                AppDelegate.shared().selectedPhotos.append(ph)
+            }
+        }
+        performSegue(withIdentifier: "PropertySegue", sender: self)
+    }
+    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         mapView.removeAnnotations(mapView.annotations)
         getAreaCoordinates()
     }
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-          
-          let id = MKMapViewDefaultAnnotationViewReuseIdentifier
-          
-          if let v = mapView.dequeueReusableAnnotationView(
-              withIdentifier: id, for: annotation) as? MKMarkerAnnotationView {
-              v.canShowCallout = true
-              v.image = #imageLiteral(resourceName: "logo1_small")
-              v.markerTintColor = UIColor.clear
-              v.glyphTintColor = UIColor.clear
-              return v
-          }
-          return nil
-      }
+        
+        let id = MKMapViewDefaultAnnotationViewReuseIdentifier
+        
+        if let v = mapView.dequeueReusableAnnotationView(
+            withIdentifier: id, for: annotation) as? MKMarkerAnnotationView {
+            v.canShowCallout = true
+            v.image = #imageLiteral(resourceName: "logo1_small")
+            v.markerTintColor = UIColor.clear
+            v.glyphTintColor = UIColor.clear
+            return v
+        }
+        return nil
+    }
 }
 
 extension MapViewController:CLLocationManagerDelegate{

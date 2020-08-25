@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var googleSignInImageView: UIImageView!
     @IBOutlet weak var facebookSignInImageView: UIImageView!
     
-    
     var email = "";
     var password = "";
 

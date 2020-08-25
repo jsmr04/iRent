@@ -1338,7 +1338,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto, ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI0-JZ-PPY">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Toronto, ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI0-JZ-PPY">
                                                         <rect key="frame" x="166.33333333333334" y="89" width="81.333333333333343" height="17.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
@@ -1538,6 +1538,12 @@
                                                         <color key="tintColor" name="RedMain"/>
                                                         <state key="normal" title="Landload's name"/>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Toronto, ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIF-oh-kiy">
+                                                        <rect key="frame" x="166.33333333333334" y="114" width="81.333333333333343" height="17.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1552,13 +1558,15 @@
                                                     <constraint firstItem="gOx-mt-29p" firstAttribute="top" secondItem="Hfm-3o-amW" secondAttribute="bottom" constant="20" id="TGy-ak-Jij"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ezd-21-xKE" secondAttribute="trailing" constant="20" id="VE7-p6-apq"/>
                                                     <constraint firstItem="49t-7t-iKX" firstAttribute="top" secondItem="Ezd-21-xKE" secondAttribute="bottom" constant="73.670000000000002" id="XlT-Mi-vG0"/>
+                                                    <constraint firstItem="xIF-oh-kiy" firstAttribute="centerX" secondItem="FyY-9e-Aj8" secondAttribute="centerX" id="YaN-ci-8xO"/>
                                                     <constraint firstItem="xI0-JZ-PPY" firstAttribute="leading" secondItem="kck-R9-UJa" secondAttribute="trailing" constant="3" id="ZMR-kA-FQW"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vyq-9L-hJ0" secondAttribute="trailing" constant="20" id="bbt-TH-x96"/>
                                                     <constraint firstAttribute="height" constant="435" id="dM5-bN-p90"/>
+                                                    <constraint firstItem="xIF-oh-kiy" firstAttribute="top" secondItem="xI0-JZ-PPY" secondAttribute="bottom" constant="7.3300000000000001" id="eIl-2J-ftj"/>
                                                     <constraint firstItem="kck-R9-UJa" firstAttribute="top" secondItem="Ezd-21-xKE" secondAttribute="bottom" constant="8" id="ghl-Bn-b0R"/>
                                                     <constraint firstItem="xI0-JZ-PPY" firstAttribute="top" secondItem="Ezd-21-xKE" secondAttribute="bottom" constant="8" id="i79-lE-8s0"/>
                                                     <constraint firstItem="49t-7t-iKX" firstAttribute="leading" secondItem="FyY-9e-Aj8" secondAttribute="leading" constant="20" id="kh3-uz-X2V"/>
-                                                    <constraint firstItem="Hfm-3o-amW" firstAttribute="top" secondItem="xI0-JZ-PPY" secondAttribute="bottom" constant="48.329999999999998" id="s3Y-AV-dGj"/>
+                                                    <constraint firstItem="Hfm-3o-amW" firstAttribute="top" secondItem="xIF-oh-kiy" secondAttribute="bottom" constant="23.329999999999998" id="r4i-Mw-nSx"/>
                                                     <constraint firstAttribute="trailing" secondItem="gOx-mt-29p" secondAttribute="trailing" constant="20" id="tbJ-ew-xWn"/>
                                                 </constraints>
                                             </view>
@@ -1580,7 +1588,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="9ab-6o-EIL"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descriptin" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-xb-2LL">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descriptin" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-xb-2LL">
                                                         <rect key="frame" x="20" y="47.333333333333371" width="374" height="20.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="151" id="ltI-OW-c1H"/>
@@ -1724,16 +1732,17 @@
                         <viewLayoutGuide key="safeArea" id="JT0-9y-191"/>
                     </view>
                     <connections>
-                        <outlet property="DescriptionLabel" destination="Jb8-xb-2LL" id="s0f-to-XKD"/>
                         <outlet property="ParkingNumberLabel" destination="jr5-UO-qgh" id="JCp-4h-hkA"/>
                         <outlet property="airConditioningImageView" destination="q70-Yl-qhS" id="IlV-7s-Rmp"/>
                         <outlet property="bathroomNumberLabel" destination="8VU-Ag-due" id="mSK-x7-drN"/>
                         <outlet property="bedroomNumberLabel" destination="LWa-mU-lce" id="Elx-He-xg9"/>
                         <outlet property="collectionView" destination="E1E-2V-jO9" id="tCH-lA-EoO"/>
+                        <outlet property="descriptionLabel" destination="Jb8-xb-2LL" id="s0f-to-XKD"/>
                         <outlet property="fireplaceImageView" destination="9PC-Lr-9MF" id="jiU-g6-8Ib"/>
                         <outlet property="heatingImageView" destination="TuU-Xm-cDK" id="Ht7-IX-r1I"/>
                         <outlet property="landlordNameLabel" destination="Hfm-3o-amW" id="f5X-3K-J4Q"/>
                         <outlet property="laundryImageView" destination="Rsv-gC-e0H" id="OS9-HX-C3Z"/>
+                        <outlet property="location2Label" destination="xIF-oh-kiy" id="BUg-1N-jaE"/>
                         <outlet property="locationLabel" destination="xI0-JZ-PPY" id="2N9-eQ-uET"/>
                         <outlet property="locationMapView" destination="Yem-Ff-fQL" id="xkz-zq-hUr"/>
                         <outlet property="priceButton" destination="3Ni-rT-o9F" id="Yu9-MM-k4x"/>
@@ -2071,7 +2080,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Wy5-VQ-nCJ">
-                                                    <rect key="frame" x="158" y="40" width="242" height="103"/>
+                                                    <rect key="frame" x="158" y="40" width="227" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -2117,7 +2126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB0-0d-hjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3143" y="1002"/>
+            <point key="canvasLocation" x="3142.0289855072465" y="1001.7857142857142"/>
         </scene>
         <!--Post Property-->
         <scene sceneID="5v8-za-p6S">

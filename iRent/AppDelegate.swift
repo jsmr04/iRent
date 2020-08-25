@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var property = Property()
     var propertyPhotos = [PropertyPhoto]()
-    var propertyList = [PropertyList]()
+    var selectedPhotos = [PropertyPhoto]()
+    var propertyList = [Property]()
+    var propertyId = ""
+    var userId = ""
     
     static func shared() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate

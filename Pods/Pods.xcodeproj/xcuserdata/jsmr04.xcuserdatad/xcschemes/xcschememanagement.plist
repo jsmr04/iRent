@@ -108,7 +108,7 @@
 		<key>Pods-iRent-iRentUITests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>23</integer>
 		</dict>
 		<key>Pods-iRent.xcscheme</key>
 		<dict>
@@ -120,7 +120,7 @@
 		<key>Pods-iRentTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>24</integer>
 		</dict>
 		<key>PromisesObjC.xcscheme</key>
 		<dict>
