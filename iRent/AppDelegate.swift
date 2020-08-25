@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var propertyPhotos = [PropertyPhoto]()
     var selectedPhotos = [PropertyPhoto]()
     var propertyList = [Property]()
+    var application = Application()
     var propertyId = ""
     var userId = ""
     

@@ -13,6 +13,12 @@ public class Application {
     var created:String = ""
     var offer:String = ""
     var comment:String = ""
+    var ownerId:String = ""
     var applicantName:String = ""
+    var address:String = ""
+    var title:String = ""
+    var status:String = ""
+    var photo:String = ""
     
 }
+
