@@ -53,6 +53,20 @@ class ApplicationViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("User On?: \(isUserLoggedIn())")
+        if !isUserLoggedIn(){
+            performSegue(withIdentifier: "applicationToLogin", sender: self)
+        }
+    }
+    
+    func isUserLoggedIn()->Bool{
+        if Auth.auth().currentUser != nil {
+            return true
+        }else{
+            return false
+        }
+    }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         print(applyButton.titleLabel?.text)
@@ -71,6 +85,7 @@ class ApplicationViewController: UIViewController {
                                "created":Common.getDateTime("DATE") + " " + Common.getDateTime("TIME"),
                                "offer": String(offerTextField.text!),
                                "comment": String(commentTextView.text),
+                               "applicantName": user.displayName,
                 ]
             
             guard let key = refApplication.child("application").child(user.uid).childByAutoId().key else { return }

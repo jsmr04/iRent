@@ -123,6 +123,7 @@ class PropertyViewController: UIViewController {
     
     
     @IBAction func applyButtonClicked(_ sender: UIButton) {
+        
         performSegue(withIdentifier: "ApplySegue", sender: nil)
     }
     
