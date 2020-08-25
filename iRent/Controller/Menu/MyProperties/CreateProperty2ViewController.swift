@@ -175,6 +175,7 @@ extension CreateProperty2ViewController: UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         switch indexPath.row {
         case 0:
             AppDelegate.shared().property.heating = "1"
@@ -192,6 +193,7 @@ extension CreateProperty2ViewController: UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
         switch indexPath.row {
         case 0:
             AppDelegate.shared().property.heating = "0"
