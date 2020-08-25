@@ -39,7 +39,7 @@
 		6EA1277024ED68BF00B06327 /* iRentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1276F24ED68BF00B06327 /* iRentTests.swift */; };
 		6EA1277B24ED68BF00B06327 /* iRentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1277A24ED68BF00B06327 /* iRentUITests.swift */; };
 		6EA1278924EDA99D00B06327 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1278824EDA99D00B06327 /* MapViewController.swift */; };
-		EC214D76D35E412ED1761E02 /* Pods_iRent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76725EBF6671206654873271 /* Pods_iRent.framework */; };
+		B612CFE1C474090B38730F39 /* Pods_iRent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE3DB5E78CEFFA5B5017964 /* Pods_iRent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,8 @@
 		19EB7A3324EDEB8000BF1AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19FD044824F4559C00D0D614 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		19FD044A24F478CF00D0D614 /* ApplicationRequestDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRequestDocumentsViewController.swift; sourceTree = "<group>"; };
-		4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.release.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
+		2FE3DB5E78CEFFA5B5017964 /* Pods_iRent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4270D0B8A34C6CDB09DE832B /* Pods-iRent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.debug.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.debug.xcconfig"; sourceTree = "<group>"; };
 		6E025E9224F1B3020073AD5A /* CreateProperty1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProperty1ViewController.swift; sourceTree = "<group>"; };
 		6E025E9424F20EE00073AD5A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		6E025E9624F324570073AD5A /* PropertyPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyPhoto.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		6E2B5CDD24EEB5A500F3D11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E2B5CDF24EEC29200F3D11B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E2B5CE224EEF92300F3D11B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		6E72B9D60DAE3AA2947AE668 /* Pods-iRent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.debug.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.debug.xcconfig"; sourceTree = "<group>"; };
 		6E96051524F15DC000C681AB /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		6E96051724F1783000C681AB /* FeaturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewController.swift; sourceTree = "<group>"; };
 		6E96051924F1A5A900C681AB /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		6EA1277A24ED68BF00B06327 /* iRentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRentUITests.swift; sourceTree = "<group>"; };
 		6EA1277C24ED68BF00B06327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA1278824EDA99D00B06327 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		76725EBF6671206654873271 /* Pods_iRent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE635B48B81AF524F4B61D1 /* Pods-iRent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRent.release.xcconfig"; path = "Target Support Files/Pods-iRent/Pods-iRent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC214D76D35E412ED1761E02 /* Pods_iRent.framework in Frameworks */,
+				B612CFE1C474090B38730F39 /* Pods_iRent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,14 +173,6 @@
 				19B5F0AC24F405A6004B43C9 /* PropertyCollectionViewCell.swift */,
 			);
 			path = PropertyView;
-			sourceTree = "<group>";
-		};
-		291E6C7D044F8852AEEFC7EC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				76725EBF6671206654873271 /* Pods_iRent.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6E025E9C24F48F590073AD5A /* Recovered References */ = {
@@ -263,8 +255,8 @@
 				6EA1277924ED68BF00B06327 /* iRentUITests */,
 				6EA1275624ED68B600B06327 /* Products */,
 				B2A123384F15CE3AF003B48B /* Pods */,
-				291E6C7D044F8852AEEFC7EC /* Frameworks */,
 				6E025E9C24F48F590073AD5A /* Recovered References */,
+				CA0C26DF28B99110452DB57C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,10 +306,18 @@
 		B2A123384F15CE3AF003B48B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6E72B9D60DAE3AA2947AE668 /* Pods-iRent.debug.xcconfig */,
-				4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */,
+				4270D0B8A34C6CDB09DE832B /* Pods-iRent.debug.xcconfig */,
+				CDE635B48B81AF524F4B61D1 /* Pods-iRent.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA0C26DF28B99110452DB57C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3DB5E78CEFFA5B5017964 /* Pods_iRent.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,11 +327,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EA1277F24ED68BF00B06327 /* Build configuration list for PBXNativeTarget "iRent" */;
 			buildPhases = (
-				88C1B9CB8B04C77C62974C96 /* [CP] Check Pods Manifest.lock */,
+				9CE336A05050A48AC45ECE7E /* [CP] Check Pods Manifest.lock */,
 				6EA1275124ED68B600B06327 /* Sources */,
 				6EA1275224ED68B600B06327 /* Frameworks */,
 				6EA1275324ED68B600B06327 /* Resources */,
-				2D02E14DC8812D12E0075D20 /* [CP] Embed Pods Frameworks */,
+				91348D8B41231E7F47DF22CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,7 +450,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D02E14DC8812D12E0075D20 /* [CP] Embed Pods Frameworks */ = {
+		91348D8B41231E7F47DF22CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,7 +467,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iRent/Pods-iRent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88C1B9CB8B04C77C62974C96 /* [CP] Check Pods Manifest.lock */ = {
+		9CE336A05050A48AC45ECE7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -692,7 +692,7 @@
 		};
 		6EA1278024ED68BF00B06327 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E72B9D60DAE3AA2947AE668 /* Pods-iRent.debug.xcconfig */;
+			baseConfigurationReference = 4270D0B8A34C6CDB09DE832B /* Pods-iRent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,7 +711,7 @@
 		};
 		6EA1278124ED68BF00B06327 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4418F55600048328AD3049EA /* Pods-iRent.release.xcconfig */;
+			baseConfigurationReference = CDE635B48B81AF524F4B61D1 /* Pods-iRent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

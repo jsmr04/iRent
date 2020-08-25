@@ -41,6 +41,7 @@ class CreatePropertyViewController: UIViewController {
         //propertyToLogin
         setUpTextView()
         typePickerView.delegate = self
+        title = "Post Property"
         
         //TODO: Fix the size issue in the collection view
         let layout = UICollectionViewFlowLayout()
@@ -186,13 +187,13 @@ extension CreatePropertyViewController: UITextViewDelegate {
         descriptionTextView.delegate = self
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.6).cgColor
-        descriptionTextView.layer.cornerRadius = 5
         descriptionTextView.text = "Describe your property..."
         descriptionTextView.textColor = UIColor.lightGray.withAlphaComponent(0.6)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if descriptionTextView.textColor == UIColor.lightGray.withAlphaComponent(0.6) {
+            descriptionTextView.layer.borderColor = UIColor(named: "RedMain")?.withAlphaComponent(0.6).cgColor
             descriptionTextView.text = nil
             descriptionTextView.textColor = UIColor.black
         }
@@ -202,6 +203,7 @@ extension CreatePropertyViewController: UITextViewDelegate {
         if descriptionTextView.text.isEmpty {
             descriptionTextView.text = "Describe your property..."
             descriptionTextView.textColor = UIColor.lightGray.withAlphaComponent(0.6)
+            descriptionTextView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.6).cgColor
         }
     }
 }

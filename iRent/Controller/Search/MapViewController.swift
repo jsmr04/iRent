@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import CoreLocation
 import MapKit
+import FirebaseDatabase
 
 class MapViewController: UIViewController {
     var userLoggedIn = false
