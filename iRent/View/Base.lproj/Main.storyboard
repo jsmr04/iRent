@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byG-Jv-aUU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -2068,7 +2068,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="iEo-YG-lkj"/>
                                 </constraints>
-                                <color key="textColor" name="BlackWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2161,6 +2161,7 @@
                         <outlet property="propertyImageView" destination="1RN-rZ-6ou" id="Q1r-mL-HQx"/>
                         <outlet property="titleLabel" destination="XXG-HI-e3E" id="a98-8U-xmQ"/>
                         <segue destination="b2p-Pc-U6C" kind="show" identifier="DocumentsRequestSegue" id="Gn9-Kc-lKl"/>
+                        <segue destination="zYK-ps-rzu" kind="show" identifier="applicationToLogin" id="Nhw-Cz-A0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMz-FK-uHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2263,7 +2264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7P-Uy-Goy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4002.898550724638" y="312.72321428571428"/>
+            <point key="canvasLocation" x="-3720" y="714"/>
         </scene>
         <!--Private Chat View Controller-->
         <scene sceneID="Iln-EQ-FGV">
@@ -2933,7 +2934,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Kti-2a-pZE"/>
         <segue reference="XX4-nO-PW8"/>
-        <segue reference="imd-S6-Upy"/>
+        <segue reference="Nhw-Cz-A0v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bath_logo" width="209" height="192"/>
