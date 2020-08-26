@@ -31,29 +31,34 @@ class ApplicationListViewController: UIViewController {
     func getApplications(){
         applications.removeAll()
         if let user = Auth.auth().currentUser{
-            refApplications.child("application").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            refApplications.child("application").observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
+                
                 if let value = snapshot.value as? NSDictionary{
-                    print(value.allKeys)
-                    for key in value.allKeys{
-                        let p = value[key] as? NSDictionary
-                        
-                        let id = key as! String
-                        
-                        let application = Application()
-                        application.id = p?["id"] as? String ?? ""
-                        application.title = p?["title"] as? String ?? ""
-                        application.propertyId = p?["propertyId"] as? String ?? ""
-                        application.comment = p?["comment"] as? String ?? ""
-                        application.created = p?["created"] as? String ?? ""
-                        application.offer = p?["offer"] as? String ?? ""
-                        application.ownerId = p?["ownerId"] as? String ?? ""
-                        application.applicantName = p?["applicantName"] as? String ?? ""
-                        application.address = p?["address"] as? String ?? ""
-                        application.status = p?["status"] as? String ?? ""
-                        application.photo = p?["photo"] as? String ?? ""
-           
-                        self.applications.append(application)
+                    for keyUser in value.allKeys{
+                        if let applicationJson = value[keyUser] as? NSDictionary{
+                            print(value.allKeys)
+                            for key in applicationJson.allKeys{
+                                let p = applicationJson[key] as? NSDictionary
+                                
+                                let id = key as! String
+                                
+                                let application = Application()
+                                application.id = p?["id"] as? String ?? ""
+                                application.title = p?["title"] as? String ?? ""
+                                application.propertyId = p?["propertyId"] as? String ?? ""
+                                application.comment = p?["comment"] as? String ?? ""
+                                application.created = p?["created"] as? String ?? ""
+                                application.offer = p?["offer"] as? String ?? ""
+                                application.ownerId = p?["ownerId"] as? String ?? ""
+                                application.applicantName = p?["applicantName"] as? String ?? ""
+                                application.address = p?["address"] as? String ?? ""
+                                application.status = p?["status"] as? String ?? ""
+                                application.photo = p?["photo"] as? String ?? ""
+                                
+                                self.applications.append(application)
+                            }
+                        }
                     }
                 }
                 
