@@ -33,26 +33,34 @@ The research and design's documentation is available inside the folder researh-a
 
 **Main Screen**
 
+<img src="/irent-images/main-menu.png" width="300" height="650"> 
+
+**Main Menu**
+
 <img src="/irent-images/main.png" width="300" height="650"> 
+
+**Authentication**
+
+<img src="/irent-images/login.png" width="300" height="650"> <img src="/irent-images/signup.png" width="300" height="650"> 
+
 
 **Add New Property**
 
 <img src="/irent-images/add-property.png" width="300" height="650"> <img src="/irent-images/add-property-2.png" width="300" height="650">  <img src="/irent-images/add-property-3.png" width="300" height="650"> 
 
+**My Properties**
+
+<img src="/irent-images/my-properties.png" width="300" height="650"> 
+
 **Authentication**
 
 <img src="/droidnote-images/main.jpg" width="300" height="600"> <img src="/droidnote-images/signup.jpg" width="300" height="600"> <img src="/droidnote-images/signin.jpg" width="300" height="600">
 
-**List of Notes (Sorting and Filtering)**
+**Search**
 
-<img src="/droidnote-images/notes.jpg" width="300" height="600"> <img src="/droidnote-images/filter.jpg" width="300" height="600"> <img src="/droidnote-images/sort.jpg" width="300" height="600">
+<img src="/droidnote-images/search.jpg" width="300" height="600"> 
 
-**Note**
+**Apply**
 
-<img src="/droidnote-images/note.jpg" width="300" height="600"> <img src="/droidnote-images/attachments.jpg" width="300" height="600">
+<img src="/droidnote-images/apply.jpg" width="300" height="600"> <img src="/droidnote-images/applications.jpg" width="300" height="600"> 
 
-<img src="/droidnote-images/image.jpg" width="300" height="600"> <img src="/droidnote-images/record-audio.jpg" width="300" height="600">
-
-**Location Tracker**
-
-<img src="/droidnote-images/location-tracker.jpg" width="300" height="600">
