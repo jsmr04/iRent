@@ -54,7 +54,7 @@ The research and design's documentation is available inside the folder researh-a
 
 **Authentication**
 
-<img src="/irent-images/login.png" width="300" height="650"> <img src="/droidnote-images/signup.png" width="300" height="650"> 
+<img src="/irent-images/login.png" width="300" height="650"> <img src="/droidnote-images/irent.png" width="300" height="650"> 
 
 **Search**
 
