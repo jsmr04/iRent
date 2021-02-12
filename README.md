@@ -31,6 +31,13 @@ The research and design's documentation is available inside the folder researh-a
 
 <img src="/irent-images/launchscreen.png" width="300" height="650"> 
 
+**Main Screen**
+
+<img src="/irent-images/main.png" width="300" height="650"> 
+
+**Add New Property**
+
+<img src="/irent-images/add-property.png" width="300" height="650"> <img src="/irent-images/add-property-2.png" width="300" height="650">  <img src="/irent-images/add-property-3.png" width="300" height="650"> 
 
 **Authentication**
 
