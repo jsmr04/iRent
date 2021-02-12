@@ -21,6 +21,7 @@ The research and design's documentation is available inside the folder researh-a
 
 ## Built With
 * **IDE:** Xcode
+* **Interface Builder:** Storyboard
 * **Patern:** MVC
 * **Auth:** Google Play Services and Firebase's Authentication
 * **Cloud Database:** Firebase's Realtime Database
