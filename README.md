@@ -24,7 +24,7 @@ The research and design's documentation is available inside the folder researh-a
 * **Patern:** MVC
 * **Auth:** Google Play Services and Firebase's Authentication
 * **Cloud Database:** Firebase's Realtime Database
-* **Storage:** Firebase's Firebase
+* **Storage:** Firebase's Storage
 
 ## Screenshots
 **Launch Screen**
