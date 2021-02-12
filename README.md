@@ -14,7 +14,7 @@ The research and design's documentation is available inside the folder researh-a
 * Search a house nearby using map or list
 * View the house's details
 * Location tracker
-* Share notes
+* Requests
 
 ## Platform
 * iOS
