@@ -29,7 +29,7 @@ The research and design's documentation is available inside the folder researh-a
 ## Screenshots
 **Launch Screen**
 
-<img src="/irent-images/launchscreen.png" width="300" height="700"> 
+<img src="/irent-images/launchscreen.png" width="300" height="650"> 
 
 
 **Authentication**
