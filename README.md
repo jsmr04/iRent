@@ -54,13 +54,13 @@ The research and design's documentation is available inside the folder researh-a
 
 **Authentication**
 
-<img src="/droidnote-images/main.jpg" width="300" height="600"> <img src="/droidnote-images/signup.jpg" width="300" height="600"> <img src="/droidnote-images/signin.jpg" width="300" height="600">
+<img src="/irent-images/login.jpg" width="300" height="650"> <img src="/droidnote-images/signup.jpg" width="300" height="650"> 
 
 **Search**
 
-<img src="/droidnote-images/search.jpg" width="300" height="600"> 
+<img src="/irent-images/search.jpg" width="300" height="650"> 
 
 **Apply**
 
-<img src="/droidnote-images/apply.jpg" width="300" height="600"> <img src="/droidnote-images/applications.jpg" width="300" height="600"> 
+<img src="/irent-images/apply.jpg" width="300" height="650"> <img src="/irent-images/applications.jpg" width="300" height="650"> 
 
