@@ -3,6 +3,8 @@ This is a college's project for Mobile Development and Design Capstone Project c
 
 iRent is an application that allows both landlord and tenant to manage their rents. The app provides many features, we can highlight, post properties, search for a new home, real-time chat, payment, and reviews.
 
+The research and design's documentation is available inside the folder researh-and-design.
+
 ## Features
 * Authentication 
 * Create, remove and edit properties
@@ -25,6 +27,11 @@ iRent is an application that allows both landlord and tenant to manage their ren
 * **Storage:** Firebase's Firebase
 
 ## Screenshots
+**Launch Screen**
+
+<img src="/irent-images/launchscreen" width="300" height="700"> 
+
+
 **Authentication**
 
 <img src="/droidnote-images/main.jpg" width="300" height="600"> <img src="/droidnote-images/signup.jpg" width="300" height="600"> <img src="/droidnote-images/signin.jpg" width="300" height="600">
