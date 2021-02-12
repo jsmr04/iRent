@@ -1,5 +1,5 @@
 # iRent
-This is a college's project for Advanced iOS Application Development course. In this project I demonstrated things I learned through the course.
+This is a college's project for Mobile Development and Design Capstone Project course. In this project, I demonstrated things I learned through the study program.
 
 iRent is an application that allows both landlord and tenant to manage their rents. The app provides many features, we can highlight, post properties, search for a new home, real-time chat, payment, and reviews.
 
